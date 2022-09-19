@@ -1,18 +1,16 @@
 {
   "basics": {
-    "name": "Molly Maluhia",
-    "label": "Student",
-    "picture": "https://github.com/kambergjohnson.png",
-    "email": "molly@hawaii.edu",
+    "name": "Tracy Mutugi",
+    "label": "Data Analyst",
+    "picture": "https://avatars.githubusercontent.com/u/61119851?s=400&u=aed62b077fbdc89836e67e1e39f9631b36c4ea69&v=4",
+    "email": "tracy.mutugi@gmail.com",
     "phone": "808-333-4444",
-    "website": "https://mmaluhia.github.io",
-    "summary": "I am studying for a B.S. in Computer Science in the Department of Information and Computer Sciences at the University of Hawaii. I expect to graduate in Spring, 2024.",
+    "website": "https://tracy-git123.github.io",
+    "summary": "I am a data analyst.",
     "location": { "address": "", "postalCode": "96822", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
     "profiles": [
-      { "network": "github", "username": "mmaluhia", "url": "http://github.com/changeme" },
-      { "network": "linkedin", "username": "mollymaluhia", "url": "http://linkedin.com/in/changeme" },
-      { "network": "twitter", "username": "mollymal", "url": "http://twitter.com/changeme" },
-      { "network": "instagram", "username": "molly", "url": "http://instagram.com/changeme" }
+      { "network": "github", "username": "tracy-git123", "url": "http://github.com/tracy-git123" },
+      { "network": "linkedin", "username": "tracymutugi", "url": "https://www.linkedin.com/in/tracymutugi/" }
     ]
   },
   "interests": [
