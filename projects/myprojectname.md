@@ -2,7 +2,7 @@
 layout: project
 type: project
 image: img/micromouse/micromouse-square.jpg
-title: "Micromouse"
+title: "My Project"
 date: 2022
 published: true
 labels:
