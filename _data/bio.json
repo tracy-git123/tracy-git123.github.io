@@ -44,27 +44,27 @@
   ],
   "work": [
     {
-      "company": "UH Manoa Board of Publications",
-      "position": "Web Developer",
-      "website": "",
-      "startDate": "2015-08-01",
-      "endDate": "Present",
-      "summary": "Head of online presence for Ka Leo",
+      "company": "WhereIsMyTransport",
+      "position": "Data Solutions Analyst",
+      "startDate": "2021",
+      "endDate": "2022",
+      "summary": "",
       "highlights": [
-        "Maintain, update, and oversee official college newspaper website",
-        "Drive, design and build student-community projects for UH Manoa"
+        "Reviewed and enriched datasets for global clients such as Google Maps, the World Bank, Bolt SA, Grab Asia and Rumbo",
+        "Engineered automated data validations into survey tools to improve data quality and reduce data entry error" 
       ]
     },
     {
-      "company": "UH Information Technology Services",
-      "position": "Help Desk Consultant",
-      "website": "http://www.hawaii.edu/its/",
-      "startDate": "2015-01-01",
-      "endDate": "2016-03-15",
+      "company": "Kite Capital",
+      "position": "Analytics Consultant",
+      "website": "",
+      "startDate": "2018",
+      "endDate": "2019",
       "summary": "",
       "highlights": [
-        "Troubleshoot software, hardware and networking issues over the phone",
-        "Answer phone and email responses to the ITS Help Desk"
+        "Cleaning, processing and geocoding government asset data for City of Joburg municipality",
+        "Prepared data and processed export requests in SQL",
+        "Designed data visualisations and dashboards to assist managers to view regional and ward specific data"
       ]
     }
   ],
