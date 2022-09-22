@@ -29,13 +29,17 @@
   ],
   "education": [
     {
-      "institution": "University of Hawaii, Honolulu, HI",
-      "area": "Computer Science (expected Spring, 2018)",
-      "studyType": "B.S.",
-      "startDate": "2013-09-01",
-      "endDate": "Present",
-      "courses": [
-      ]
+      "institution": "Explore Data Science Academy",
+      "area": "Data Science and Information Systems Development",
+      "startDate": "2020",
+      "endDate": "2020"
+      
+    },
+    {
+      "institution": "University of the Witwatersrand",
+      "area": "Bachelor of Science",
+      "startDate": "2013",
+      "endDate": "2016"
     }
   ],
   "work": [
