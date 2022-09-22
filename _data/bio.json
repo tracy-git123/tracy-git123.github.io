@@ -4,10 +4,10 @@
     "label": "Data Analyst",
     "picture": "https://avatars.githubusercontent.com/u/61119851?s=400&u=aed62b077fbdc89836e67e1e39f9631b36c4ea69&v=4",
     "email": "tracy.mutugi@gmail.com",
-    "phone": "808-333-4444",
+    "phone": "",
     "website": "https://tracy-git123.github.io",
     "summary": "I am a data analyst.",
-    "location": { "address": "", "postalCode": "96822", "city": "Honolulu", "countryCode": "USA", "region": "Hawaii" },
+    "location": { "address": "", "postalCode": "", "city": "Johannesburg", "countryCode": "ZA", "region": "South Africa" },
     "profiles": [
       { "network": "github", "username": "tracy-git123", "url": "http://github.com/tracy-git123" },
       { "network": "linkedin", "username": "tracymutugi", "url": "https://www.linkedin.com/in/tracymutugi/" }
@@ -24,7 +24,7 @@
     },
     {
       "name": "Toolsets/OS",
-      "keywords": [ "Windows", "Git/GitHub"]
+      "keywords": [ "Windows", "iOS", "Git/GitHub"]
     }
   ],
   "education": [
@@ -68,45 +68,13 @@
       ]
     }
   ],
-  "volunteer": [
-    {
-      "organization": "Center for Renewable Energy and Island Sustainability",
-      "website": "http://manoa.hawaii.edu/reis",
-      "position": "Software Developer",
-      "startDate": "2016-01-01",
-      "endDate": "Present",
-      "summary": "Lead developer for weather sensing project",
-      "highlights": [
-        "Design firmware for distributed weather sensor network",
-        "Maintain custom data collection and storage infrastructure"
-      ]
-    },
-    {
-      "organization": "",
-      "website": "",
-      "position": "Professional organization involvement",
-      "startDate": "",
-      "endDate": "",
-      "summary": "",
-      "highlights": [
-        "Chair, ACM Manoa, 2016-Present",
-        "Member, IEEE Student Branch, 2014-Present",
-        "Webmaster/IT Officer, IEEE Student Branch, UH Manoa, 2012-2013"
-      ]
-    }
-  ],
+  
   "awards": [
     {
-      "title": "B+ Scholarship",
-      "date": "2013-Present",
-      "awarder": "State of Hawaii",
-      "summary": "Scholarships awarded to incoming freshmen and continuing students who complete a rigorous high school curriculum with a minimum overall GPA of 3.0 at a Hawai'i public school."
-    },
-    {
-      "title": "First place",
-      "date": "2015",
-      "awarder": "University of Hawaii Micromouse Competition",
-      "summary": "My team won first place in 2015.  See my portfolio site for more details."
+      "title": "Postgraduate Merit Award",
+      "date": "2016",
+      "awarder": "University of the Witwatersrand",
+      "summary": "Scholarships awarded to students in the top 10% of the undergraduate class."
     }
   ],
   "references": [
