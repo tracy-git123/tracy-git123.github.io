@@ -61,11 +61,11 @@ dtype: int64
 Superfluous columns were removed from the dataframe:
 - Province and Municipality are the same for the whole dataset --> "Gauteng, Johannesburg"
 - Work telephone number, spouse age and spouse gender was provided by very few applicants and will not be useful for analysis
-```
+```cpp
 newdf = newdf.drop(columns=['ProvinceID','Municipality','WorkTelNo','Spouse Age', 'Spouse GenderID'])
 ```
 These are the columns that are now left in the dataframe
-```
+```cpp
 newdf.columns
 
 Index(['TownName', 'Region ', 'Area', 'QuestionaireID', 'Registration Date',
@@ -78,7 +78,7 @@ Index(['TownName', 'Region ', 'Area', 'QuestionaireID', 'Registration Date',
 
 Next up is filling the gaps/empty rows in the dataset with relevant values
 
-```
+```cpp
 newdf['StreetName'] = newdf['StreetName'].fillna('None')
 newdf['HouseNo'] = newdf['HouseNo'].fillna('None')
 newdf['WardNo'] = newdf['WardNo'].fillna(0)
@@ -94,7 +94,7 @@ newdf['Water'] = newdf['Water'].fillna('12. Unknown')
 ```
 
 Next I did an investigation of the Ward number values by print out the unique values that were entered in that column:
-```
+```cpp
 newdf['WardNo'].unique()
 
 array([0, '11', '2', '12', '121', '32', '23', '22', '21', '10', '1002',
@@ -139,7 +139,7 @@ array([0, '11', '2', '12', '121', '32', '23', '22', '21', '10', '1002',
       dtype=object)
 ```
 As shown by output above the Ward number column is filled with poorly formatted,inconsistent data type and string values where integers are expected. The quality of the data would not good enough to use in analysis so I will remove thie column and rebuild this data using additional data.
-```
+```cpp
 #Drop Ward Number due to bad data
 newdf = newdf.drop(columns=['WardNo'])
 ```
@@ -147,7 +147,7 @@ newdf = newdf.drop(columns=['WardNo'])
 Now that the data has been checked and quality improve, I explored the data graphically using the Seaborn data visualisation library.
 
 First I wanted to know how many housing applicants are there in each region of Johannesburg?
-```
+```cpp
 sns.countplot(x=newdf['Region '], order=['A','B','C','D','E','F','G'])
 ```
 <img width="200px" src="img/Capture.PNG" class="img-thumbnail" >
