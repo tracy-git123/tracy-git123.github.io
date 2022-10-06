@@ -58,4 +58,90 @@ Disability             73683
 dtype: int64
 ```
 
+Superfluous columns were removed from the dataframe:
+- Province and Municipality are the same for the whole dataset --> "Gauteng, Johannesburg"
+- Work telephone number, spouse age and spouse gender was provided by very few applicants and will not be useful for analysis
+```
+newdf = newdf.drop(columns=['ProvinceID','Municipality','WorkTelNo','Spouse Age', 'Spouse GenderID'])
+```
+These are the columns that are now left in the dataframe
+```
+newdf.columns
+
+Index(['TownName', 'Region ', 'Area', 'QuestionaireID', 'Registration Date',
+       'Year ', 'Month ', 'Day', 'StreetName', 'HouseNo', 'WardNo',
+       'HomeTelNo', 'CellNo', 'Relationship', 'Age Main Member',
+       'Gender Main Member', 'MonthlyIncome', 'HSS Status', 'DwellingType',
+       'EnergySource', 'Sanitation', 'Water', 'Disability'],
+      dtype='object')
+```
+
+Next up is filling the gaps/empty rows in the dataset with relevant values
+
+```
+newdf['StreetName'] = newdf['StreetName'].fillna('None')
+newdf['HouseNo'] = newdf['HouseNo'].fillna('None')
+newdf['WardNo'] = newdf['WardNo'].fillna(0)
+newdf['HomeTelNo'] = newdf['HomeTelNo'].fillna('None')
+newdf['CellNo'] = newdf['CellNo'].fillna('None')
+newdf['Age Main Member'] = newdf['Age Main Member'].fillna(0)
+newdf['Gender Main Member'] = newdf['Gender Main Member'].fillna('None')
+newdf['MonthlyIncome'] = newdf['MonthlyIncome'].fillna('0. Response not given')
+newdf['DwellingType'] = newdf['DwellingType'].fillna('9. Unknown')
+newdf['EnergySource'] = newdf['EnergySource'].fillna('9. Unknown')
+newdf['Sanitation'] = newdf['Sanitation'].fillna('10. Unknown')
+newdf['Water'] = newdf['Water'].fillna('12. Unknown')
+```
+
+Next I did an investigation of the Ward number values by print out the unique values that were entered in that column:
+```
+newdf['WardNo'].unique()
+
+array([0, '11', '2', '12', '121', '32', '23', '22', '21', '10', '1002',
+       '2003', '100', '200', '65', '95', '920', '632', '0', '62', '16',
+       '119', '25', '66', '29', '19', ' ', 'BLOCK 8', '47', '53', '48',
+       '63', '321', '500', '153', '85', '42', '43', '103', '1661', '654',
+       '129', '44', '45', '7', '50', 'none', '84', '49', '82', '52', '9',
+       12.0, 14.0, 24.0, 35.0, 32.0, 200.0, 100.0, 20.0, 65.0, 95.0, 50.0,
+       119.0, 53.0, 952.0, 129.0, 51.0, 61.0, 54.0, 31.0, 29.0, 30.0,
+       10.0, 15.0, 125.0, 123.0, 120.0, 21.0, 34.0, 28.0, 632.0, 652.0,
+       321.0, 62.0, 654.0, 39.0, 2003.0, 1002.0, 27.0, 621.0, 962.0,
+       332.0, 19.0, 26.0, 25.0, 122.0, 112.0, 236.0, 3176.0, 23.0, 2001.0,
+       52.0, 130.0, 110.0, '26', '33', '300', '231', '35', '621', '36',
+       '951', '37', '34', '652', '54', '6', '24', '46', '51', '1', '17',
+       '13', '55', '18', 'Q', '2127', '259', '41', '38', '39', '322',
+       '2000', '20', '98', '962', '130', '14', '40', '102', '8', '230',
+       '123', '1230', '522', '620', '191', 'NONE', '31', '120', '852',
+       '3', '202', '125', '563', '630', '5', '4', '56', '921', '15', '27',
+       '28', '30', '106', '227', '92', '             ', '362', 'WARD 25',
+       'REGION 9', 'MAPETLA', '952', '2001', '3003', '39/41', 'WARD 39',
+       '213', '963', '263', '210', 'ward 15', '122', 'EXT 29', '542',
+       '49FARANA', '127', '113', 'ward 12', '1003', '193', '320', '520',
+       '57', 'NUL', 'CHRIS HANI', '149', '201', '114', 'REGION  D', '651',
+       '400', ' N/A', '258', 'PIMVILLE EXT6', 'kh', '4061A', '203', '115',
+       '135', 'NU', 'ZONE 6', '128', 'DIEPKLOOF ZONE 4', '199',
+       'PROTEA NORTH', 'PIMVILLE ZONE 4', '67', 'non', 'WARD 75',
+       '         ', '107', '91', '90', '600', '521', '159', 'E', '75',
+       'no 15 avenue', '3002', 'REGION A', ']', 'REGION6', 'A', '352',
+       '156', '1159', '145', '221', '911', '960', '96', '116', '154',
+       '152', '69', '650', '124', '77', '60', '2111', '403', '68', '118',
+       '279', ' CAMP', '58', '965', 'van der merwe', '178', '1830', '126',
+       '627', '1811', 'fre', '24  FREEDOM PARK', 'AVENUE', '1376', '3597',
+       'STR', '59', 'WARD 62', '61', '1259', '86', 'WARD 60', 'NO', '610',
+       '73', 'WARD 21', '74', '2100', '79', '105', '196', '80', 'T',
+       'UNKOWN', '97', '1122', '89', '64', 'BLOCK A', 'unknoww',
+       'THABEDE', '110', 'GRASMERE', 'MOUNTAIN VIEW', 'G', 'unknown',
+       '832', 'PLOT 56', 'WARD 10', '241', '358', '829', '693', 'ext 9',
+       22.0, 1.0, 57.0, 89.0, 6.0, 7.0, 79.0, 111.0, 77.0, '2103', '192',
+       '78', 'mlilo', '08 REGION A', '111', '214', '177', 'RGION  4',
+       '131', 'EXT 3B', '2013', '1000', 'ward 3', '953', '99', '491',
+       'EXT2', '71', '70', '72', '925', '624', '914', '220', '81', '83'],
+      dtype=object)
+```
+As shown by output above the Ward number column is filled with poorly formatted and inconsistent data. The quality of the data would not good enough to use in analysis so I will remove thie column and rebuild this data using additional data.
+```
+#Drop Ward Number due to bad data
+newdf = newdf.drop(columns=['WardNo'])
+```
+
 You can learn more at the [UH Micromouse News Announcement](https://manoa.hawaii.edu/news/article.php?aId=2857).
