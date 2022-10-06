@@ -7,9 +7,12 @@ date: 2020
 published: true
 labels:
   - Python
+  - Sci-kit Learn
+  - Predictive model
   - Machine Learning
+  - Regression
   - Logistics
-summary: "This was a machine learning project where a model was trained to predict the arrival time of a delivery."
+summary: "This was a predictive modelling project where a model was trained to predict the arrival time of a delivery."
 ---
 
 This project made use of data from over 30 000 deliveries completed by Sendy in Nairobi, Kenya.
