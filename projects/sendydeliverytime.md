@@ -15,7 +15,7 @@ labels:
 summary: "This was a predictive modelling project where a model was trained to predict the arrival time of a delivery."
 ---
 
-This project made use of data from over 30 000 deliveries completed by Sendy in Nairobi, Kenya.
+This project made use of data from over 28 000 deliveries completed by Sendy in Nairobi, Kenya.
 The dataset used to train the predictive model used 21 201 data points while the model was test on 7 068 data points.
 The aim was was to optimise the model to improve the Mean Sqaured Error score.
 
