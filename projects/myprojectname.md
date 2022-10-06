@@ -2,13 +2,13 @@
 layout: project
 type: project
 image: img/micromouse/micromouse-square.jpg
-title: "My Project"
-date: 2022
+title: "Public Housing Demand in Johannesburg"
+date: 2019
 published: true
 labels:
   - Python
-  - Machine Learning
-summary: "Data analysis project I did to investigate the question xyz."
+  - Exploratory Data Analysis (EDA)
+summary: "This was an exploratory data analysis of a public housing applicant database."
 ---
 
 <div class="text-center p-4">
@@ -17,10 +17,9 @@ summary: "Data analysis project I did to investigate the question xyz."
   <img width="200px" src="../img/micromouse/micromouse-circuit.png" class="img-thumbnail" >
 </div>
 
-[project description and problem statement go here] Rerum aperiam temporibus ducimus. Quis magnam et saepe magni. Autem impedit voluptatem molestias velit. Rerum asperiores facere mollitia tempora. Quae vel qui omnis et quia labore sit. Sapiente ea quam qui rem impedit hic eveniet ipsam. 
-
-Omnis dignissimos aut vitae mollitia fuga cupiditate. Est fugiat at non. Ab adipisci esse omnis deleniti minus.
-Ut rerum molestias voluptatem et. Ad non aperiam quis vitae commodi magni. Sit similique culpa aspernatur.
+Millions of people move to Johannesburg every year in search of opportunities, yet the housing market is not able to keep up with demand.
+The government's Department of Human Settlements fund housing programmes in all municpalities such as Johannesburg in order to provide housing to citizen.
+This project explores the housing applicant data for citizens in the City of Johannesburg which stands at approximately 450,000 people.
 
 Here is some code that illustrates how we read values from the line sensors:
 
