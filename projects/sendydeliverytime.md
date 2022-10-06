@@ -54,7 +54,7 @@ Data columns (total 25 columns):
 dtypes: float64(6), int64(10), object(9)
 ```
 
-1. The attributes I chose to include in the model were: 
+1) The attributes I chose to include in the model were: 
 - Day of the week - since traffic conditions on the weekend or weekday influnce delivery times
 - Precipitation - since rain will impact traffic congestion on the road system
 - Distance - between the Sendy depot and the delivery destination
@@ -103,7 +103,7 @@ dtypes: float64(2), int64(2)
 memory usage: 221.0 KB
 ```
 
-2. Model training using the the training dataset:
+2) Model training using the the training dataset:
 
 ```cpp
 x = train1.drop('Time_from_Pickup_to_Arrival', axis=1)
@@ -120,7 +120,7 @@ reg.fit(X, y)
 y_preds = reg.predict(X)
 ```
 
-3. Next I calculated the root mean squared error between the between the predicted delivery time and the actual delivery times:
+3) Next I calculated the root mean squared error between the between the predicted delivery time and the actual delivery times:
 
 ```cpp
 def rmse(y_test, y_predict):
@@ -131,7 +131,7 @@ def rmse(y_test, y_predict):
       794.4000853649443
 ```
 
-4. Finally I applied the model to predict delivery times on the test dataset:
+4) Finally I applied the model to predict delivery times on the test dataset:
 
 ```cpp
 xt = test1.drop('Time_from_Pickup_to_Arrival', axis=1)
