@@ -138,10 +138,18 @@ array([0, '11', '2', '12', '121', '32', '23', '22', '21', '10', '1002',
        'EXT2', '71', '70', '72', '925', '624', '914', '220', '81', '83'],
       dtype=object)
 ```
-As shown by output above the Ward number column is filled with poorly formatted and inconsistent data. The quality of the data would not good enough to use in analysis so I will remove thie column and rebuild this data using additional data.
+As shown by output above the Ward number column is filled with poorly formatted,inconsistent data type and string values where integers are expected. The quality of the data would not good enough to use in analysis so I will remove thie column and rebuild this data using additional data.
 ```
 #Drop Ward Number due to bad data
 newdf = newdf.drop(columns=['WardNo'])
 ```
+
+Now that the data has been checked and quality improve, I explored the data graphically using the Seaborn data visualisation library.
+
+First I wanted to know how many housing applicants are there in each region of Johannesburg?
+```
+sns.countplot(x=newdf['Region '], order=['A','B','C','D','E','F','G'])
+```
+<img width="200px" src="img/Capture.PNG" class="img-thumbnail" >
 
 You can learn more at the [UH Micromouse News Announcement](https://manoa.hawaii.edu/news/article.php?aId=2857).
