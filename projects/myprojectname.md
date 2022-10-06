@@ -61,10 +61,13 @@ dtype: int64
 Superfluous columns were removed from the dataframe:
 - Province and Municipality are the same for the whole dataset --> "Gauteng, Johannesburg"
 - Work telephone number, spouse age and spouse gender was provided by very few applicants and will not be useful for analysis
+
 ```cpp
 newdf = newdf.drop(columns=['ProvinceID','Municipality','WorkTelNo','Spouse Age', 'Spouse GenderID'])
 ```
-These are the columns that are now left in the dataframe
+
+These are the columns that are now left in the dataframe:
+
 ```cpp
 newdf.columns
 
@@ -76,7 +79,7 @@ Index(['TownName', 'Region ', 'Area', 'QuestionaireID', 'Registration Date',
       dtype='object')
 ```
 
-Next up is filling the gaps/empty rows in the dataset with relevant values
+Next up is filling the gaps/empty rows in the dataset with relevant values:
 
 ```cpp
 newdf['StreetName'] = newdf['StreetName'].fillna('None')
@@ -150,6 +153,8 @@ First I wanted to know how many housing applicants are there in each region of J
 ```cpp
 sns.countplot(x=newdf['Region '], order=['A','B','C','D','E','F','G'])
 ```
-<img width="200px" src="img/Capture.PNG" class="img-thumbnail" >
+<div class="text-center p-4">
+  <img width="200px" src="img/Capture.PNG" class="img-thumbnail" >
+</div>
 
 You can learn more at the [UH Micromouse News Announcement](https://manoa.hawaii.edu/news/article.php?aId=2857).
