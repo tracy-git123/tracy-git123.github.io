@@ -154,7 +154,7 @@ First I wanted to know how many housing applicants are there in each region of J
 sns.countplot(x=newdf['Region '], order=['A','B','C','D','E','F','G'])
 ```
 <div class="text-center p-4">
-  <img width="200px" src="img/Capture.PNG" class="img-thumbnail" >
+  <img width="200px" src="../img/Capture.PNG" class="img-thumbnail" >
 </div>
 
 You can learn more at the [UH Micromouse News Announcement](https://manoa.hawaii.edu/news/article.php?aId=2857).
