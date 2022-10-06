@@ -17,7 +17,7 @@ The government's Department of Human Settlements fund housing programmes in all 
 This project explores the housing applicant data for citizens in the City of Johannesburg which stands at approximately 450,000 people.
 
 <div class="text-center p-4">
-  <img width="400px" src="../img/4.PNG" class="img-thumbnail" >
+  <img width="600px" src="../img/4.PNG" class="img-thumbnail" >
 </div>
 
 Here is a summary of rows which have data in each column and as we can see several columns have data gaps where no values were entered:
