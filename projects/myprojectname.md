@@ -11,12 +11,6 @@ labels:
 summary: "This was an exploratory data analysis of a public housing applicant database."
 ---
 
-<div class="text-center p-4">
-  <img width="200px" src="../img/micromouse/micromouse-robot.png" class="img-thumbnail" >
-  <img width="200px" src="../img/micromouse/micromouse-robot-2.jpg" class="img-thumbnail" >
-  <img width="200px" src="../img/micromouse/micromouse-circuit.png" class="img-thumbnail" >
-</div>
-
 Millions of people move to Johannesburg every year in search of opportunities, yet the housing market is not able to keep up with demand.
 The government's Department of Human Settlements fund housing programmes in all municpalities such as Johannesburg in order to provide housing to citizen.
 This project explores the housing applicant data for citizens in the City of Johannesburg which stands at approximately 450,000 people.
@@ -141,7 +135,7 @@ array([0, '11', '2', '12', '121', '32', '23', '22', '21', '10', '1002',
        'EXT2', '71', '70', '72', '925', '624', '914', '220', '81', '83'],
       dtype=object)
 ```
-As shown by output above the Ward number column is filled with poorly formatted,inconsistent data type and string values where integers are expected. The quality of the data would not good enough to use in analysis so I will remove thie column and rebuild this data using additional data.
+As shown by output above the Ward number column is filled with poorly formatted,inconsistent data type and string values where integers are expected. The quality of the data would not good enough to use in analysis so I will remove thie column and rebuild this data with accurate information.
 ```cpp
 #Drop Ward Number due to bad data
 newdf = newdf.drop(columns=['WardNo'])
@@ -154,7 +148,7 @@ First I wanted to know how many housing applicants are there in each region of J
 sns.countplot(x=newdf['Region '], order=['A','B','C','D','E','F','G'])
 ```
 <div class="text-center p-4">
-  <img width="200px" src="../img/Capture.PNG" class="img-thumbnail" >
+  <img width="400px" src="../img/Capture.PNG" class="img-thumbnail" >
 </div>
 
 You can learn more at the [UH Micromouse News Announcement](https://manoa.hawaii.edu/news/article.php?aId=2857).
