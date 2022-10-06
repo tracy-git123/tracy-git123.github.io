@@ -91,6 +91,7 @@ newdf['Water'] = newdf['Water'].fillna('12. Unknown')
 ```
 
 Next I did an investigation of the Ward number values by print out the unique values that were entered in that column:
+
 ```cpp
 newdf['WardNo'].unique()
 
@@ -141,6 +142,9 @@ As shown by output above the Ward number column is filled with poorly formatted,
 newdf = newdf.drop(columns=['WardNo'])
 ```
 
+
+
+
 Now that the data has been checked and quality improve, I explored the data graphically using the Seaborn data visualisation library.
 
 First I wanted to know how many housing applicants are there in each region of Johannesburg?
@@ -151,4 +155,16 @@ sns.countplot(x=newdf['Region '], order=['A','B','C','D','E','F','G'])
   <img width="400px" src="../img/Capture.PNG" class="img-thumbnail" >
 </div>
 
-You can learn more at the [UH Micromouse News Announcement](https://manoa.hawaii.edu/news/article.php?aId=2857).
+
+Secondly I looked at how many applicant there were in various Income brackets:
+<div class="text-center p-4">
+  <img width="400px" src="../img/2.PNG" class="img-thumbnail" >
+</div>
+
+
+Finally I looked at what Dwelling types applicants are staying in at the moment:
+<div class="text-center p-4">
+  <img width="400px" src="../img/3.PNG" class="img-thumbnail" >
+</div>
+
+You can learn more using the [notebook for this project] (https://manoa.hawaii.edu/news/article.php?aId=2857).
