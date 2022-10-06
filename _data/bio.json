@@ -15,7 +15,8 @@
   },
   "interests": [
     { "name": "Maps" },
-    { "name": "Public transport" }
+    { "name": "Transport" },
+    { "name": "Housing" }
   ],
   "skills": [
     {
@@ -36,8 +37,15 @@
       
     },
     {
+      "institution": "University of Cape Town",
+      "area": "Transport Studies",
+      "startDate": "2019",
+      "endDate": "2020"
+      
+    },
+    {
       "institution": "University of the Witwatersrand",
-      "area": "Bachelor of Science",
+      "area": "Bachelor of Science in Urban Planning",
       "startDate": "2013",
       "endDate": "2016"
     }
@@ -75,6 +83,12 @@
       "date": "2016",
       "awarder": "University of the Witwatersrand",
       "summary": "Scholarships awarded to students in the top 10% of the undergraduate class."
+    },
+    {
+      "title": "National Research Foundation Innovation Award",
+      "date": "2020",
+      "awarder": "University of Cape Town",
+      "summary": ""
     }
   ],
   "references": [
