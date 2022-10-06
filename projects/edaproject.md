@@ -8,12 +8,17 @@ published: true
 labels:
   - Python
   - Exploratory Data Analysis (EDA)
+  - Data cleaning
 summary: "This was an exploratory data analysis of a public housing applicant database."
 ---
 
 Millions of people move to Johannesburg every year in search of opportunities, yet the housing market is not able to keep up with demand.
 The government's Department of Human Settlements fund housing programmes in all municpalities such as Johannesburg in order to provide housing to citizen.
 This project explores the housing applicant data for citizens in the City of Johannesburg which stands at approximately 450,000 people.
+
+<div class="text-center p-4">
+  <img width="400px" src="../img/4.PNG" class="img-thumbnail" >
+</div>
 
 Here is a summary of rows which have data in each column and as we can see several columns have data gaps where no values were entered:
 
@@ -52,7 +57,7 @@ Disability             73683
 dtype: int64
 ```
 
-Superfluous columns were removed from the dataframe:
+1. Superfluous columns were removed from the dataframe:
 - Province and Municipality are the same for the whole dataset --> "Gauteng, Johannesburg"
 - Work telephone number, spouse age and spouse gender was provided by very few applicants and will not be useful for analysis
 
@@ -73,7 +78,7 @@ Index(['TownName', 'Region ', 'Area', 'QuestionaireID', 'Registration Date',
       dtype='object')
 ```
 
-Next up is filling the gaps/empty rows in the dataset with relevant values:
+2. Next up is filling the gaps/empty rows in the dataset with relevant values:
 
 ```cpp
 newdf['StreetName'] = newdf['StreetName'].fillna('None')
@@ -90,7 +95,7 @@ newdf['Sanitation'] = newdf['Sanitation'].fillna('10. Unknown')
 newdf['Water'] = newdf['Water'].fillna('12. Unknown')
 ```
 
-Next I did an investigation of the Ward number values by print out the unique values that were entered in that column:
+3. Next I did an investigation of the Ward number values by print out the unique values that were entered in that column:
 
 ```cpp
 newdf['WardNo'].unique()
@@ -142,10 +147,41 @@ As shown by output above the Ward number column is filled with poorly formatted,
 newdf = newdf.drop(columns=['WardNo'])
 ```
 
+4. Next I did an investigation of the applicant Age values by print out the summary statstics for the column:
+
+```cpp
+newdf['Age Main Member'].describe()
+count    455791.000000
+mean         48.312248
+std          13.670387
+min           0.000000
+25%          39.000000
+50%          47.000000
+75%          57.000000
+max        1814.000000
+Name: Age Main Member, dtype: float64
+```
+As shown in the output above the highest age entered is 1814 and lowest age is 0 which are unrealistic age values for an applicant and would skew the data.
+In order to remove this outlier, I removed rows from the data set where age was over 100 or under 18. This resulted in the removal of 648 rows.
+
+```cpp
+newdf.drop(newdf[newdf['Age Main Member']>100].index, inplace=True)
+newdf.drop(newdf[newdf['Age Main Member']<18].index, inplace=True)
+
+newdf['Age Main Member'].describe()
+count    455143.000000
+mean         48.323522
+std          13.204649
+min          18.000000
+25%          39.000000
+50%          47.000000
+75%          57.000000
+max         100.000000
+Name: Age Main Member, dtype: float64
+```
 
 
-
-Now that the data has been checked and quality improve, I explored the data graphically using the Seaborn data visualisation library.
+5. Now that the data has been checked and quality improve, I explored the data graphically using the Seaborn data visualisation library.
 
 First I wanted to know how many housing applicants are there in each region of Johannesburg?
 ```cpp
@@ -161,10 +197,12 @@ Secondly I looked at how many applicant there were in various Income brackets:
   <img width="400px" src="../img/2.PNG" class="img-thumbnail" >
 </div>
 
+Third I looked at the age distrubuition of applicants in each region:
+<div class="text-center p-4">
+  <img width="400px" src="../img/5.PNG" class="img-thumbnail" >
+</div>
 
 Finally I looked at what Dwelling types applicants are staying in at the moment:
 <div class="text-center p-4">
-  <img width="400px" src="../img/3.PNG" class="img-thumbnail" >
+  <img width="600px" src="../img/3.PNG" class="img-thumbnail" >
 </div>
-
-You can learn more using the [notebook for this project] (https://manoa.hawaii.edu/news/article.php?aId=2857).
