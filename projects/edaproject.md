@@ -19,6 +19,33 @@ This project explores the housing applicant data for citizens in the City of Joh
 <div class="text-center p-4">
   <img width="600px" src="../img/4.PNG" class="img-thumbnail" >
 </div>
+I explored the data graphically using the Seaborn data visualisation library.
+
+First I wanted to know how many housing applicants are there in each region of Johannesburg?
+```cpp
+sns.countplot(x=newdf['Region '], order=['A','B','C','D','E','F','G'])
+```
+<div class="text-center p-4">
+  <img width="400px" src="../img/Capture.PNG" class="img-thumbnail" >
+</div>
+
+
+Secondly I looked at how many applicants there were in various Income brackets:
+<div class="text-center p-4">
+  <img width="400px" src="../img/2.PNG" class="img-thumbnail" >
+</div>
+
+Third I looked at the age distrubuition of applicants in each region.
+<div class="text-center p-4">
+  <img width="400px" src="../img/5.PNG" class="img-thumbnail" >
+</div>
+
+Finally I looked at what Dwelling types applicants are staying in at the moment. It is clear that the people in need of public housing are those living in informal dwelling types.
+<div class="text-center p-4">
+  <img width="600px" src="../img/3.PNG" class="img-thumbnail" >
+</div>
+
+Below is a breakdown of some the exploratory data analysis I did on the public housing applicant dataset.
 
 Here is a summary of rows which have data in each column and as we can see several columns have data gaps where no values were entered:
 
@@ -59,7 +86,7 @@ dtype: int64
 
 1. Superfluous columns were removed from the dataframe:
 - Province and Municipality are the same for the whole dataset --> "Gauteng, Johannesburg"
-- Work telephone number, spouse age and spouse gender was provided by very few applicants and will not be useful for analysis
+- Work telephone number, spouse age and spouse gender was provided by very few applicants and will not be useful for analysis of the main applicant.
 
 ```cpp
 newdf = newdf.drop(columns=['ProvinceID','Municipality','WorkTelNo','Spouse Age', 'Spouse GenderID'])
@@ -180,29 +207,3 @@ max         100.000000
 Name: Age Main Member, dtype: float64
 ```
 
-
-5. Now that the data has been checked and quality improve, I explored the data graphically using the Seaborn data visualisation library.
-
-First I wanted to know how many housing applicants are there in each region of Johannesburg?
-```cpp
-sns.countplot(x=newdf['Region '], order=['A','B','C','D','E','F','G'])
-```
-<div class="text-center p-4">
-  <img width="400px" src="../img/Capture.PNG" class="img-thumbnail" >
-</div>
-
-
-Secondly I looked at how many applicant there were in various Income brackets:
-<div class="text-center p-4">
-  <img width="400px" src="../img/2.PNG" class="img-thumbnail" >
-</div>
-
-Third I looked at the age distrubuition of applicants in each region:
-<div class="text-center p-4">
-  <img width="400px" src="../img/5.PNG" class="img-thumbnail" >
-</div>
-
-Finally I looked at what Dwelling types applicants are staying in at the moment:
-<div class="text-center p-4">
-  <img width="600px" src="../img/3.PNG" class="img-thumbnail" >
-</div>
