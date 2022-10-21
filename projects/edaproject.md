@@ -13,8 +13,8 @@ summary: "This was an exploratory data analysis of a public housing applicant da
 ---
 
 Millions of people move to Johannesburg every year in search of opportunities, yet the housing market is not able to keep up with demand.
-The government's Department of Human Settlements fund housing programmes in all municpalities such as Johannesburg in order to provide housing to citizen.
-This project explores the housing applicant data for citizens in the City of Johannesburg which stands at approximately 450,000 people.
+The government's Department of Human Settlements fund housing programmes in all municpalities such as Johannesburg in order to provide housing to citizens.
+This project explores the housing applicant data for citizens in the City of Johannesburg which stood at approximately 450,000 applicants in 2018.
 
 <div class="text-center p-4">
   <img width="600px" src="../img/4.PNG" class="img-thumbnail" >
@@ -31,24 +31,24 @@ sns.countplot(x=newdf['Region '], order=['A','B','C','D','E','F','G'])
 <div class="text-center p-4">
   <img width="400px" src="../img/region count map.PNG" class="img-thumbnail" >
 </div>
-
+Region D has the most applicants which is expected as this were Soweto is located which has become one most highly populated areas in Johannesburg. Soweto alone is home to 1.2 million people of Johannesburg's 5.6 million population.
 
 Secondly I looked at how many applicants there were in various Income brackets:
 <div class="text-center p-4">
   <img width="400px" src="../img/2.PNG" class="img-thumbnail" >
 </div>
 
-Third I looked at the age distrubuition of applicants in each region.
+Third I looked at the age distrubuition of applicants across gender.
 <div class="text-center p-4">
   <img width="400px" src="../img/5.PNG" class="img-thumbnail" >
 </div>
 
-Finally I looked at what Dwelling types applicants are staying in at the moment. It is clear that the people in need of public housing are those living in informal dwelling types.
+Finally I looked at what Dwelling types applicants are staying in at the moment. Most applicant foe public housing are those living in informal dwelling types and likely have poor access to water, energy and sanitation services.
 <div class="text-center p-4">
   <img width="600px" src="../img/3.PNG" class="img-thumbnail" >
 </div>
 
-Below is a breakdown of some the exploratory data analysis I did on the public housing applicant dataset.
+Below is a breakdown of how I explored and cleaned the public housing applicant dataset.
 
 Here is a summary of rows which have data in each column and as we can see several columns have data gaps where no values were entered:
 
@@ -117,7 +117,7 @@ newdf['WardNo'] = newdf['WardNo'].fillna(0)
 newdf['HomeTelNo'] = newdf['HomeTelNo'].fillna('None')
 newdf['CellNo'] = newdf['CellNo'].fillna('None')
 newdf['Age Main Member'] = newdf['Age Main Member'].fillna(0)
-newdf['Gender Main Member'] = newdf['Gender Main Member'].fillna('None')
+newdf['Gender Main Member'] = newdf['Gender Main Member'].fillna('U')
 newdf['MonthlyIncome'] = newdf['MonthlyIncome'].fillna('0. Response not given')
 newdf['DwellingType'] = newdf['DwellingType'].fillna('9. Unknown')
 newdf['EnergySource'] = newdf['EnergySource'].fillna('9. Unknown')
@@ -125,7 +125,7 @@ newdf['Sanitation'] = newdf['Sanitation'].fillna('10. Unknown')
 newdf['Water'] = newdf['Water'].fillna('12. Unknown')
 ```
 
-3. Next I did an investigation of the Ward number values by print out the unique values that were entered in that column:
+3. Next I did an investigation of the Ward number values by printing out the unique values that were entered in that column:
 
 ```cpp
 newdf['WardNo'].unique()
@@ -171,7 +171,7 @@ array([0, '11', '2', '12', '121', '32', '23', '22', '21', '10', '1002',
        'EXT2', '71', '70', '72', '925', '624', '914', '220', '81', '83'],
       dtype=object)
 ```
-As shown by output above the Ward number column is filled with poorly formatted,inconsistent data type and string values where integers are expected. The quality of the data would not good enough to use in analysis so I will remove thie column and rebuild this data with accurate information.
+As shown by output above, I found that the Ward number column is filled with poorly formatted data, inconsistent data types and string values where only integers are expected. The quality of the data would not good enough to use in analysis so I will remove thie column.
 ```cpp
 #Drop Ward Number due to bad data
 newdf = newdf.drop(columns=['WardNo'])
@@ -191,8 +191,8 @@ min           0.000000
 max        1814.000000
 Name: Age Main Member, dtype: float64
 ```
-As shown in the output above the highest age entered is 1814 and lowest age is 0 which are unrealistic age values for an applicant and would skew the data.
-In order to remove this outlier, I removed rows from the data set where age was over 100 or under 18. This resulted in the removal of 648 rows.
+As shown in the output above the highest age entered is 1814 and lowest age is 0 indicating some data entry errors as these ages are unrealistic age values for an applicant and would skew the data.
+In order to remove these outliers, I removed rows from the data set where age was under 18 or over 100. This resulted in the removal of 648 rows.
 
 ```cpp
 newdf.drop(newdf[newdf['Age Main Member']>100].index, inplace=True)
@@ -209,4 +209,4 @@ min          18.000000
 max         100.000000
 Name: Age Main Member, dtype: float64
 ```
-
+There still appear to be some applicants where the enter age is 100. This may be plausible but would warrant further investigation.
