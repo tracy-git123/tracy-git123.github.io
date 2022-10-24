@@ -19,35 +19,44 @@ This project explores the housing applicant data for citizens in the City of Joh
 <div class="text-center p-4">
   <img width="600px" src="../img/4.PNG" class="img-thumbnail" >
 </div>
+
+This page covers insights from this dataset and also the data cleaning I did on the dataset.
+
+# Insights
 I explored the data graphically using the Seaborn data visualisation library.
 
-First I wanted to know how many housing applicants are there in each region of Johannesburg?
+## First I wanted to know how many housing applicants are there in each region of Johannesburg?
 ```cpp
 sns.countplot(x=newdf['Region '], order=['A','B','C','D','E','F','G'])
 ```
 <div class="text-center p-4">
   <img width="400px" src="../img/Capture.PNG" class="img-thumbnail" >
 </div>
+
+Region D has the most applicants which is expected as this were Soweto is located which has become one most highly populated areas in Johannesburg. Soweto alone is home to 1.2 million people of Johannesburg's 5.6 million population.
+
 <div class="text-center p-4">
   <img width="400px" src="../img/region count map.PNG" class="img-thumbnail" >
 </div>
-Region D has the most applicants which is expected as this were Soweto is located which has become one most highly populated areas in Johannesburg. Soweto alone is home to 1.2 million people of Johannesburg's 5.6 million population.
 
-Secondly I looked at how many applicants there were in various Income brackets:
+
+## Secondly I looked at how many applicants there were in various monthly income brackets:
 <div class="text-center p-4">
   <img width="400px" src="../img/2.PNG" class="img-thumbnail" >
 </div>
 
-Third I looked at the age distrubuition of applicants across gender.
+## Third I looked at the age distrubuition of applicants across gender.
 <div class="text-center p-4">
   <img width="400px" src="../img/5.PNG" class="img-thumbnail" >
 </div>
 
-Finally I looked at what Dwelling types applicants are staying in at the moment. Most applicant foe public housing are those living in informal dwelling types and likely have poor access to water, energy and sanitation services.
+## Finally I looked at what Dwelling types applicants are staying in at the moment. 
+Most applicant foe public housing are those living in informal dwelling types and likely have poor access to water, energy and sanitation services.
 <div class="text-center p-4">
   <img width="600px" src="../img/3.PNG" class="img-thumbnail" >
 </div>
 
+# Data Cleaning
 Below is a breakdown of how I explored and cleaned the public housing applicant dataset.
 
 Here is a summary of rows which have data in each column and as we can see several columns have data gaps where no values were entered:
@@ -86,9 +95,27 @@ Water                 455788
 Disability             73683
 dtype: int64
 ```
+## 1. Removing duplicate data
+- I identified duplicate entries based on the QuestionaireID field since each unique applicant should have a unique Questionnaire and only one entry in the applicant dataset. 
+- My analysis found over 14,000 duplicates in the dataset which were removed and reduced the number of unique applicants to 441,553.
+```cpp
+#Here the variable 'p' stores a boolean value which evaluates if a Questionaire ID is a duplicate or not.
+p = newdf.duplicated('QuestionaireID')
 
-1. Superfluous columns were removed from the dataframe:
-- Province and Municipality are the same for the whole dataset --> "Gauteng, Johannesburg"
+#The variable 'q' is a list that stores all the Questionaire ID values that evaluated to True and 14,238 duplicates were identified.
+q = []
+for i in p.iteritems():
+    if i[1] == True:
+        q.append(i[0])
+        
+len(q) = 14238
+
+#Finally the code below drops all the duplicate values.
+newdf.drop_duplicates(subset='QuestionaireID', keep='first',inplace=True)
+```
+
+## 2. Superfluous columns were removed from the dataframe:
+- Province and Municipality are the same for the whole dataset --> "Gauteng" and "Johannesburg"
 - Work telephone number, spouse age and spouse gender was provided by very few applicants and will not be useful for analysis of the main applicant.
 
 ```cpp
@@ -108,7 +135,7 @@ Index(['TownName', 'Region ', 'Area', 'QuestionaireID', 'Registration Date',
       dtype='object')
 ```
 
-2. Next up is filling the gaps/empty rows in the dataset with relevant values:
+## 3. Next up is filling the gaps or empty rows in the dataset with relevant values:
 
 ```cpp
 newdf['StreetName'] = newdf['StreetName'].fillna('None')
@@ -125,7 +152,7 @@ newdf['Sanitation'] = newdf['Sanitation'].fillna('10. Unknown')
 newdf['Water'] = newdf['Water'].fillna('12. Unknown')
 ```
 
-3. Next I did an investigation of the Ward number values by printing out the unique values that were entered in that column:
+## 4. Next I did an investigation of the Ward number values by printing out the unique values that were entered in that column:
 
 ```cpp
 newdf['WardNo'].unique()
@@ -171,17 +198,14 @@ array([0, '11', '2', '12', '121', '32', '23', '22', '21', '10', '1002',
        'EXT2', '71', '70', '72', '925', '624', '914', '220', '81', '83'],
       dtype=object)
 ```
-As shown by output above, I found that the Ward number column is filled with poorly formatted data, inconsistent data types and string values where only integers are expected. The quality of the data would not good enough to use in analysis so I will remove thie column.
-```cpp
-#Drop Ward Number due to bad data
-newdf = newdf.drop(columns=['WardNo'])
-```
+- As shown by output above, I found that the Ward number column is filled with poorly formatted data, inconsistent data types and string values where only integers are expected. The quality of the data would not good enough to use in analysis so I removed this column.
 
-4. Next I did an investigation of the applicant Age values by print out the summary statstics for the column:
+
+## 5. Next I did an investigation of the applicant Age values by printing out the summary statstics for the column:
 
 ```cpp
 newdf['Age Main Member'].describe()
-count    455791.000000
+count    441553.000000
 mean         48.312248
 std          13.670387
 min           0.000000
@@ -191,15 +215,15 @@ min           0.000000
 max        1814.000000
 Name: Age Main Member, dtype: float64
 ```
-As shown in the output above the highest age entered is 1814 and lowest age is 0 indicating some data entry errors as these ages are unrealistic age values for an applicant and would skew the data.
-In order to remove these outliers, I removed rows from the data set where age was under 18 or over 100. This resulted in the removal of 648 rows.
+- As shown in the output above the highest age entered is 1814 and lowest age is 0 indicating some data entry errors as these ages are unrealistic age values for an applicant and would skew the data.
+- In order to remove these outliers, I removed rows from the dataset where the age value was under 18 or over 100. This resulted in the removal of 648 rows.
 
 ```cpp
 newdf.drop(newdf[newdf['Age Main Member']>100].index, inplace=True)
 newdf.drop(newdf[newdf['Age Main Member']<18].index, inplace=True)
 
 newdf['Age Main Member'].describe()
-count    455143.000000
+count    440905.000000
 mean         48.323522
 std          13.204649
 min          18.000000
@@ -209,4 +233,4 @@ min          18.000000
 max         100.000000
 Name: Age Main Member, dtype: float64
 ```
-There still appear to be some applicants where the enter age is 100. This may be plausible but would warrant further investigation.
+- Interestingly, there still appear to be some applicants where the age value is 100. This may be plausible but would require further investigation to ensure this is not a data error.
