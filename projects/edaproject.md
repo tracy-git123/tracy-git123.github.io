@@ -54,7 +54,7 @@ sns.countplot(x=newdf['Region '], order=['A','B','C','D','E','F','G'])
 
 ### 4. Next I looked at the age distrubuition of applicants split by gender.
 <div class="text-center p-4">
-  <img width="400px" src="../img/5.PNG" class="img-thumbnail" >
+  <img width="400px" src="../img/gender applicants.PNG" class="img-thumbnail" >
 </div>
 
 ### 5. Finally I looked at what Dwelling types applicants are staying in at the moment. 
