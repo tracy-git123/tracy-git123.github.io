@@ -20,12 +20,19 @@ This project explores the housing applicant data for citizens in the City of Joh
   <img width="600px" src="../img/4.PNG" class="img-thumbnail" >
 </div>
 
-This page covers insights from this dataset and also the data cleaning I did on the dataset.
+This page is split into two sections and covers 5 insights I extracted from the dataset and also 5 things I did to clean the dataset and improve data quality.
 
 # Insights
 I explored the data graphically using the Seaborn data visualisation library.
 
-## First I wanted to know how many housing applicants are there in each region of Johannesburg?
+### 1. I looked at the number of housing applications made from 1994 to 2018.
+- Apart from the initial spike when the housing program was launched, the top 3 years for housing applications were in 2008 (72,755 applications) followed by 2017 (47,642 applications) and 2000 (32,408 applications). 
+- The average number of applications over this period was 17,622.
+<div class="text-center p-4">
+  <img width="400px" src="../img/application per year.PNG" class="img-thumbnail" >
+</div>
+
+### 2. Next I wanted to know how many housing applicants are there in each region of Johannesburg?
 ```cpp
 sns.countplot(x=newdf['Region '], order=['A','B','C','D','E','F','G'])
 ```
@@ -33,25 +40,25 @@ sns.countplot(x=newdf['Region '], order=['A','B','C','D','E','F','G'])
   <img width="400px" src="../img/Capture.PNG" class="img-thumbnail" >
 </div>
 
-Region D has the most applicants which is expected as this were Soweto is located which has become one most highly populated areas in Johannesburg. Soweto alone is home to 1.2 million people of Johannesburg's 5.6 million population.
+- Region D has the most applicants which is expected as this were Soweto is located which has become one most highly populated areas in Johannesburg. Soweto alone is home to 1.2 million people of Johannesburg's 5.6 million population.
 
 <div class="text-center p-4">
   <img width="400px" src="../img/region count map.PNG" class="img-thumbnail" >
 </div>
 
 
-## Secondly I looked at how many applicants there were in various monthly income brackets:
+### 3. Next I looked at how many applicants there were in various monthly income brackets:
 <div class="text-center p-4">
   <img width="400px" src="../img/2.PNG" class="img-thumbnail" >
 </div>
 
-## Third I looked at the age distrubuition of applicants across gender.
+### 4. Next I looked at the age distrubuition of applicants split by gender.
 <div class="text-center p-4">
   <img width="400px" src="../img/5.PNG" class="img-thumbnail" >
 </div>
 
-## Finally I looked at what Dwelling types applicants are staying in at the moment. 
-Most applicant foe public housing are those living in informal dwelling types and likely have poor access to water, energy and sanitation services.
+### 5. Finally I looked at what Dwelling types applicants are staying in at the moment. 
+- Most applicants for public housing are those living in informal dwelling types and likely have poor access to water, energy and sanitation services.
 <div class="text-center p-4">
   <img width="600px" src="../img/3.PNG" class="img-thumbnail" >
 </div>
@@ -98,11 +105,12 @@ dtype: int64
 ## 1. Removing duplicate data
 - I identified duplicate entries based on the QuestionaireID field since each unique applicant should have a unique Questionnaire and only one entry in the applicant dataset. 
 - My analysis found over 14,000 duplicates in the dataset which were removed and reduced the number of unique applicants to 441,553.
+- The variable 'p' stores a boolean value which evaluates if a Questionaire ID is a duplicate or not.
+- The variable 'q' is a list that stores all the Questionaire ID values that evaluated to True and 14,238 duplicates were identified.
+
 ```cpp
-#Here the variable 'p' stores a boolean value which evaluates if a Questionaire ID is a duplicate or not.
 p = newdf.duplicated('QuestionaireID')
 
-#The variable 'q' is a list that stores all the Questionaire ID values that evaluated to True and 14,238 duplicates were identified.
 q = []
 for i in p.iteritems():
     if i[1] == True:
@@ -110,11 +118,10 @@ for i in p.iteritems():
         
 len(q) = 14238
 
-#Finally the code below drops all the duplicate values.
 newdf.drop_duplicates(subset='QuestionaireID', keep='first',inplace=True)
 ```
 
-## 2. Superfluous columns were removed from the dataframe:
+## 2. Removing superfluous columns:
 - Province and Municipality are the same for the whole dataset --> "Gauteng" and "Johannesburg"
 - Work telephone number, spouse age and spouse gender was provided by very few applicants and will not be useful for analysis of the main applicant.
 
@@ -135,7 +142,7 @@ Index(['TownName', 'Region ', 'Area', 'QuestionaireID', 'Registration Date',
       dtype='object')
 ```
 
-## 3. Next up is filling the gaps or empty rows in the dataset with relevant values:
+## 3. Next up is filling the gaps or empty rows:
 
 ```cpp
 newdf['StreetName'] = newdf['StreetName'].fillna('None')
@@ -152,7 +159,8 @@ newdf['Sanitation'] = newdf['Sanitation'].fillna('10. Unknown')
 newdf['Water'] = newdf['Water'].fillna('12. Unknown')
 ```
 
-## 4. Next I did an investigation of the Ward number values by printing out the unique values that were entered in that column:
+## 4. Investigation of Ward number values:
+- As shown by output below, I found that the Ward number column is filled with poorly formatted data, inconsistent data types and string values, where only integers are expected. The quality of the data would not good enough to use in analysis so I removed this column with a plan to rebuild it later.
 
 ```cpp
 newdf['WardNo'].unique()
@@ -198,7 +206,6 @@ array([0, '11', '2', '12', '121', '32', '23', '22', '21', '10', '1002',
        'EXT2', '71', '70', '72', '925', '624', '914', '220', '81', '83'],
       dtype=object)
 ```
-- As shown by output above, I found that the Ward number column is filled with poorly formatted data, inconsistent data types and string values where only integers are expected. The quality of the data would not good enough to use in analysis so I removed this column.
 
 
 ## 5. Next I did an investigation of the applicant Age values by printing out the summary statstics for the column:
