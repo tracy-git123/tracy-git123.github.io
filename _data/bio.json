@@ -1,0 +1,99 @@
+{
+  "basics": {
+    "name": "Tracy Mutugi",
+    "label": "Data Analyst",
+    "picture": "https://avatars.githubusercontent.com/u/61119851?s=400&u=aed62b077fbdc89836e67e1e39f9631b36c4ea69&v=4",
+    "email": "tracy.mutugi@gmail.com",
+    "phone": "",
+    "website": "https://tracy-git123.github.io",
+    "summary": "I am a forward-thinker excited about using data to build smarter cities and evangelist for data-driven urban development solutions. I have done work in Latin America, Africa, the Middle East and Asia working with public and private sector clients. My super power is always thinking about the end-user of my work and asking how I can better understand and solve the problems they face.",
+    "location": { "address": "", "postalCode": "", "city": "Johannesburg", "countryCode": "ZA", "region": "South Africa" },
+    "profiles": [
+      { "network": "github", "username": "tracy-git123", "url": "http://github.com/tracy-git123" },
+      { "network": "linkedin", "username": "tracymutugi", "url": "https://www.linkedin.com/in/tracymutugi/" }
+    ]
+  },
+  "interests": [
+    { "name": "Maps" },
+    { "name": "Transport" },
+    { "name": "Housing" }
+  ],
+  "skills": [
+    {
+      "name": "Languages and Frameworks",
+      "keywords": [ "Python", "SQL"]
+    },
+    {
+      "name": "Toolsets/OS",
+      "keywords": [ "Windows", "iOS", "Git/GitHub"]
+    }
+  ],
+  "education": [
+    {
+      "institution": "Explore Data Science Academy",
+      "area": "Data Science and Information Systems Development",
+      "startDate": "2020",
+      "endDate": "2020"
+      
+    },
+    {
+      "institution": "University of Cape Town",
+      "area": "Master of Transport Studies",
+      "startDate": "2019",
+      "endDate": "2020"
+      
+    },
+    {
+      "institution": "University of the Witwatersrand",
+      "area": "Bachelor of Science in Urban Planning",
+      "startDate": "2013",
+      "endDate": "2016"
+    }
+  ],
+  "work": [
+    {
+      "company": "WhereIsMyTransport",
+      "position": "Data Solutions Analyst",
+      "startDate": "2021",
+      "endDate": "2022",
+      "summary": "",
+      "highlights": [
+        "Reviewed and enriched datasets for global clients such as Google Maps, the World Bank, Bolt SA, Grab Asia and Rumbo",
+        "Engineered automated data validations into survey tools to improve data quality and reduce data entry error" 
+      ]
+    },
+    {
+      "company": "Kite Capital",
+      "position": "Analytics Consultant",
+      "website": "",
+      "startDate": "2018",
+      "endDate": "2019",
+      "summary": "",
+      "highlights": [
+        "Cleaning, processing and geocoding government asset data for City of Joburg municipality",
+        "Prepared data and processed export requests in SQL",
+        "Designed data visualisations and dashboards to assist managers to view regional and ward specific data"
+      ]
+    }
+  ],
+  
+  "awards": [
+    {
+      "title": "Postgraduate Merit Award",
+      "date": "2016",
+      "awarder": "University of the Witwatersrand",
+      "summary": "Scholarships awarded to students in the top 10% of the undergraduate class."
+    },
+    {
+      "title": "National Research Foundation Innovation Award",
+      "date": "2020",
+      "awarder": "University of Cape Town",
+      "summary": ""
+    }
+  ],
+  "references": [
+    {
+      "name": "Available upon request"
+    }
+  ]
+}

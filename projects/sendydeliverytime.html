@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="title" content="Predicting Delivery Arrival Time - Sendy | Tracy Mutugi | Professional Portfolio">
+    <meta name="description" content="">
+    <meta name="image" content="https://avatars.githubusercontent.com/u/61119851?s=400&u=aed62b077fbdc89836e67e1e39f9631b36c4ea69&v=4">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Tracy Mutugi | Professional Portfolio">
+    <meta property="og:url" content="https://tracy-git123.github.io/projects/sendydeliverytime.html">
+    <meta property="og:title" content="Predicting Delivery Arrival Time - Sendy | Tracy Mutugi | Professional Portfolio">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="https://avatars.githubusercontent.com/u/61119851?s=400&u=aed62b077fbdc89836e67e1e39f9631b36c4ea69&v=4">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/techfolio-theme/rubik.css">
+    <link rel="stylesheet" type="text/css" href="/css/rouge/github.css">
+    <!-- Load MathJax if 'mathjax: true' is found in your _config.yml. -->
+    
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-MML-AM_CHTML">
+    </script>
+    
+
+    <title>Predicting Delivery Arrival Time - Sendy | Tracy Mutugi | Professional Portfolio</title>
+  </head>
+  <body>
+  <header class="navbar navbar-expand navbar-light bg-light bg-gradient border-bottom">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Tracy Mutugi</a>
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <a class="nav-link" href="/#projects">Projects</a>
+        <a class="nav-link" href="/#essays">Essays</a>
+        <a class="nav-link" href="/resume.html">Resume</a>
+      </ul>
+    </div>
+  </div>
+</header>
+
+<div class="container py-4">
+  <h1 class="display-4">Predicting Delivery Arrival Time - Sendy</h1>
+ <p>This project made use of data from over 28 000 deliveries completed by Sendy in Nairobi, Kenya.
+The dataset used to train the predictive model used 21 201 data points while the model was test on 7 068 data points.
+The aim was was to optimise the model to improve the Mean Sqaured Error score.</p>
+
+<p>Here is a summary of columns that are found in the dataset which represent the delivery attributes that can be used to predict delivery time:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">Data</span> <span class="n">columns</span> <span class="p">(</span><span class="n">total</span> <span class="mi">25</span> <span class="n">columns</span><span class="p">)</span><span class="o">:</span>
+ <span class="cp">#   Column                                Non-Null Count  Dtype  
+</span><span class="o">---</span>  <span class="o">------</span>                                <span class="o">--------------</span>  <span class="o">-----</span>  
+ <span class="mi">0</span>   <span class="n">Order_No</span>                              <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">object</span> 
+ <span class="mi">1</span>   <span class="n">User_Id</span>                               <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">object</span> 
+ <span class="mi">2</span>   <span class="n">Vehicle_Type</span>                          <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">object</span> 
+ <span class="mi">3</span>   <span class="n">Platform_Type</span>                         <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">int64</span>  
+ <span class="mi">4</span>   <span class="n">Personal_or_Business</span>                  <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">object</span> 
+ <span class="mi">5</span>   <span class="n">Placement_</span><span class="o">-</span><span class="n">_Day_of_Month</span>              <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">int64</span>  
+ <span class="mi">6</span>   <span class="n">Placement_</span><span class="o">-</span><span class="n">_Weekday_</span><span class="p">(</span><span class="n">Mo_</span><span class="o">=</span><span class="n">_1</span><span class="p">)</span>          <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">int64</span>  
+ <span class="mi">7</span>   <span class="n">Placement_</span><span class="o">-</span><span class="n">_Time</span>                      <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">object</span> 
+ <span class="mi">8</span>   <span class="n">Confirmation_</span><span class="o">-</span><span class="n">_Day_of_Month</span>           <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">int64</span>  
+ <span class="mi">9</span>   <span class="n">Confirmation_</span><span class="o">-</span><span class="n">_Weekday_</span><span class="p">(</span><span class="n">Mo_</span><span class="o">=</span><span class="n">_1</span><span class="p">)</span>       <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">int64</span>  
+ <span class="mi">10</span>  <span class="n">Confirmation_</span><span class="o">-</span><span class="n">_Time</span>                   <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">object</span> 
+ <span class="mi">11</span>  <span class="n">Arrival_at_Pickup_</span><span class="o">-</span><span class="n">_Day_of_Month</span>      <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">int64</span>  
+ <span class="mi">12</span>  <span class="n">Arrival_at_Pickup_</span><span class="o">-</span><span class="n">_Weekday_</span><span class="p">(</span><span class="n">Mo_</span><span class="o">=</span><span class="n">_1</span><span class="p">)</span>  <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">int64</span>  
+ <span class="mi">13</span>  <span class="n">Arrival_at_Pickup_</span><span class="o">-</span><span class="n">_Time</span>              <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">object</span> 
+ <span class="mi">14</span>  <span class="n">Pickup_</span><span class="o">-</span><span class="n">_Day_of_Month</span>                 <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">int64</span>  
+ <span class="mi">15</span>  <span class="n">Pickup_</span><span class="o">-</span><span class="n">_Weekday_</span><span class="p">(</span><span class="n">Mo_</span><span class="o">=</span><span class="n">_1</span><span class="p">)</span>             <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">int64</span>  
+ <span class="mi">16</span>  <span class="n">Pickup_</span><span class="o">-</span><span class="n">_Time</span>                         <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">object</span> 
+ <span class="mi">17</span>  <span class="n">Distance_</span><span class="p">(</span><span class="n">KM</span><span class="p">)</span>                         <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">int64</span>  
+ <span class="mi">18</span>  <span class="n">Temperature</span>                           <span class="mi">5631</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">float64</span>
+ <span class="mi">19</span>  <span class="n">Precipitation_in_millimeters</span>          <span class="mi">199</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>    <span class="n">float64</span>
+ <span class="mi">20</span>  <span class="n">Pickup_Lat</span>                            <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">float64</span>
+ <span class="mi">21</span>  <span class="n">Pickup_Long</span>                           <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">float64</span>
+ <span class="mi">22</span>  <span class="n">Destination_Lat</span>                       <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">float64</span>
+ <span class="mi">23</span>  <span class="n">Destination_Long</span>                      <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">float64</span>
+ <span class="mi">24</span>  <span class="n">Rider_Id</span>                              <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">object</span> 
+<span class="n">dtypes</span><span class="o">:</span> <span class="n">float64</span><span class="p">(</span><span class="mi">6</span><span class="p">),</span> <span class="n">int64</span><span class="p">(</span><span class="mi">10</span><span class="p">),</span> <span class="n">object</span><span class="p">(</span><span class="mi">9</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>1) The attributes I chose to include in the model were:</p>
+<ul>
+  <li>Day of the week - since traffic conditions on the weekend or weekday influnce delivery times</li>
+  <li>Precipitation - since rain will impact traffic congestion on the road system</li>
+  <li>Distance - between the Sendy depot and the delivery destination</li>
+</ul>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">train1</span> <span class="o">=</span> <span class="n">train1</span><span class="p">[[</span><span class="err">'</span><span class="n">Pickup_</span><span class="o">-</span><span class="n">_Weekday_</span><span class="p">(</span><span class="n">Mo_</span><span class="o">=</span><span class="n">_1</span><span class="p">)</span><span class="err">'</span><span class="p">,</span>
+<span class="err">'</span><span class="n">Precipitation_in_millimeters</span><span class="sc">','</span><span class="n">Distance_</span><span class="p">(</span><span class="n">KM</span><span class="p">)</span><span class="sc">','</span><span class="n">Time_from_Pickup_to_Arrival</span><span class="err">'</span> <span class="p">]]</span>
+
+<span class="n">test1</span> <span class="o">=</span> <span class="n">test1</span><span class="p">[[</span><span class="err">'</span><span class="n">Pickup_</span><span class="o">-</span><span class="n">_Weekday_</span><span class="p">(</span><span class="n">Mo_</span><span class="o">=</span><span class="n">_1</span><span class="p">)</span><span class="err">'</span><span class="p">,</span>
+<span class="err">'</span><span class="n">Precipitation_in_millimeters</span><span class="sc">','</span><span class="n">Distance_</span><span class="p">(</span><span class="n">KM</span><span class="p">)</span><span class="err">'</span><span class="p">]]</span>
+</code></pre></div></div>
+
+<p>I streamlined the string values into numerical values in both the train and test data sets:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#weekdays get a dummy value of 0
+</span><span class="n">train1</span><span class="p">[</span><span class="err">'</span><span class="n">Pickup_</span><span class="o">-</span><span class="n">_Weekday_</span><span class="p">(</span><span class="n">Mo_</span><span class="o">=</span><span class="n">_1</span><span class="p">)</span><span class="err">'</span><span class="p">]</span> <span class="o">=</span> <span class="n">train1</span><span class="p">[</span><span class="err">'</span><span class="n">Pickup_</span><span class="o">-</span><span class="n">_Weekday_</span><span class="p">(</span><span class="n">Mo_</span><span class="o">=</span><span class="n">_1</span><span class="p">)</span><span class="err">'</span><span class="p">].</span><span class="n">replace</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">],</span><span class="mi">0</span><span class="p">)</span>
+
+<span class="cp">#weekend days get a dummy value of 1
+</span><span class="n">train1</span><span class="p">[</span><span class="err">'</span><span class="n">Pickup_</span><span class="o">-</span><span class="n">_Weekday_</span><span class="p">(</span><span class="n">Mo_</span><span class="o">=</span><span class="n">_1</span><span class="p">)</span><span class="err">'</span><span class="p">]</span> <span class="o">=</span> <span class="n">train1</span><span class="p">[</span><span class="err">'</span><span class="n">Pickup_</span><span class="o">-</span><span class="n">_Weekday_</span><span class="p">(</span><span class="n">Mo_</span><span class="o">=</span><span class="n">_1</span><span class="p">)</span><span class="err">'</span><span class="p">].</span><span class="n">replace</span><span class="p">([</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">],</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="cp">#no rain day get dummy 0
+</span><span class="n">train1</span><span class="p">[</span><span class="err">'</span><span class="n">Precipitation_in_millimeters</span><span class="err">'</span><span class="p">]</span> <span class="o">=</span> <span class="n">train1</span><span class="p">[</span><span class="err">'</span><span class="n">Precipitation_in_millimeters</span><span class="err">'</span><span class="p">].</span><span class="n">fillna</span><span class="p">(</span><span class="kt">int</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+
+<span class="cp">#rain days get dummy 1
+</span><span class="n">train1</span><span class="p">.</span><span class="n">loc</span><span class="p">[</span><span class="n">train1</span><span class="p">[</span><span class="err">'</span><span class="n">Precipitation_in_millimeters</span><span class="err">'</span><span class="p">]</span> <span class="o">&gt;</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="kt">int</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>I then created a column to store the predicted delivery times in the test-dataframe:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">test1</span><span class="p">[</span><span class="err">'</span><span class="n">Time_from_Pickup_to_Arrival</span><span class="err">'</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">nan</span>
+<span class="n">test1</span><span class="p">[</span><span class="err">'</span><span class="n">Time_from_Pickup_to_Arrival</span><span class="err">'</span><span class="p">].</span><span class="n">unique</span><span class="p">()</span>
+<span class="n">test1</span><span class="p">.</span><span class="n">info</span><span class="p">()</span>
+
+<span class="o">&lt;</span><span class="k">class</span> <span class="err">'</span><span class="n">pandas</span><span class="p">.</span><span class="n">core</span><span class="p">.</span><span class="n">frame</span><span class="p">.</span><span class="n">DataFrame</span><span class="err">'</span><span class="o">&gt;</span>
+<span class="n">RangeIndex</span><span class="o">:</span> <span class="mi">7068</span> <span class="n">entries</span><span class="p">,</span> <span class="mi">0</span> <span class="n">to</span> <span class="mi">7067</span>
+<span class="n">Data</span> <span class="n">columns</span> <span class="p">(</span><span class="n">total</span> <span class="mi">4</span> <span class="n">columns</span><span class="p">)</span><span class="o">:</span>
+ <span class="cp">#   Column                        Non-Null Count  Dtype  
+</span><span class="o">---</span>  <span class="o">------</span>                        <span class="o">--------------</span>  <span class="o">-----</span>  
+ <span class="mi">0</span>   <span class="n">Pickup_</span><span class="o">-</span><span class="n">_Weekday_</span><span class="p">(</span><span class="n">Mo_</span><span class="o">=</span><span class="n">_1</span><span class="p">)</span>     <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">int64</span>  
+ <span class="mi">1</span>   <span class="n">Precipitation_in_millimeters</span>  <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">float64</span>
+ <span class="mi">2</span>   <span class="n">Distance_</span><span class="p">(</span><span class="n">KM</span><span class="p">)</span>                 <span class="mi">7068</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>   <span class="n">int64</span>  
+ <span class="mi">3</span>   <span class="n">Time_from_Pickup_to_Arrival</span>   <span class="mi">0</span> <span class="n">non</span><span class="o">-</span><span class="n">null</span>      <span class="n">float64</span>
+<span class="n">dtypes</span><span class="o">:</span> <span class="n">float64</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span> <span class="n">int64</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">memory</span> <span class="n">usage</span><span class="o">:</span> <span class="mf">221.0</span> <span class="n">KB</span>
+</code></pre></div></div>
+
+<p>2) Model training using the the training dataset:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="n">train1</span><span class="p">.</span><span class="n">drop</span><span class="p">(</span><span class="err">'</span><span class="n">Time_from_Pickup_to_Arrival</span><span class="err">'</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">train1</span><span class="p">[</span><span class="err">'</span><span class="n">Time_from_Pickup_to_Arrival</span><span class="err">'</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">n_samples</span><span class="p">,</span> <span class="n">n_features</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">5</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">rng</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">random</span><span class="p">.</span><span class="n">RandomState</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">y</span> <span class="o">=</span> <span class="n">train1</span><span class="p">[</span><span class="err">'</span><span class="n">Time_from_Pickup_to_Arrival</span><span class="err">'</span><span class="p">]</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">X</span> <span class="o">=</span> <span class="n">train1</span><span class="p">.</span><span class="n">drop</span><span class="p">(</span><span class="err">'</span><span class="n">Time_from_Pickup_to_Arrival</span><span class="err">'</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">reg</span> <span class="o">=</span> <span class="n">make_pipeline</span><span class="p">(</span><span class="n">StandardScaler</span><span class="p">(),</span> <span class="n">SGDRegressor</span><span class="p">(</span><span class="n">max_iter</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">))</span>
+
+<span class="n">reg</span><span class="p">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+
+<span class="n">y_preds</span> <span class="o">=</span> <span class="n">reg</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+</code></pre></div></div>
+
+<p>3) Next I calculated the root mean squared error between the between the predicted delivery time and the actual delivery times:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">def</span> <span class="n">rmse</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">)</span><span class="o">:</span>
+  <span class="k">return</span> <span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_predict</span><span class="p">))</span>
+  
+  <span class="n">answer</span> <span class="o">=</span> <span class="n">rmse</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_preds</span><span class="p">)</span>
+  <span class="n">answer</span>
+      <span class="mf">794.4000853649443</span>
+</code></pre></div></div>
+
+<p>4) Finally I applied the model to predict delivery times on the test dataset:</p>
+
+<div class="language-cpp highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">xt</span> <span class="o">=</span> <span class="n">test1</span><span class="p">.</span><span class="n">drop</span><span class="p">(</span><span class="err">'</span><span class="n">Time_from_Pickup_to_Arrival</span><span class="err">'</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="n">ytest_preds</span> <span class="o">=</span> <span class="n">reg</span><span class="p">.</span><span class="n">predict</span><span class="p">(</span><span class="n">xt</span><span class="p">)</span>
+       
+<span class="n">daf</span> <span class="o">=</span> <span class="n">pd</span><span class="p">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">ytest_preds</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="err">'</span><span class="n">Time_from_Pickup_to_Arrival</span><span class="err">'</span><span class="p">])</span>
+<span class="n">daf</span><span class="p">.</span><span class="n">head</span><span class="p">()</span>
+  <span class="n">Time_from_Pickup_to_Arrival</span>
+<span class="mi">0</span> 	<span class="mf">1418.709746</span>
+<span class="mi">1</span> 	<span class="mf">1124.555383</span>
+<span class="mi">2</span> 	<span class="mf">1124.555383</span>
+<span class="mi">3</span> 	<span class="mf">1124.555383</span>
+<span class="mi">4</span> 	<span class="mf">1222.606838</span>
+</code></pre></div></div>
+
+<p>Further tuning to the model and regression can be applied to lower the RMSE.</p>
+
+</div>
+
+<footer class="navbar navbar-expand navbar-light bg-light bg-gradient border-top">
+  <div class="container-fluid">
+    <div class="ms-auto">
+      <ul class="navbar-nav mb-2 mb-lg-0">
+        <small><a class="nav-link" href="https://techfolios.github.io">Made with Techfolios</a></small>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+  </body>
+</html>
