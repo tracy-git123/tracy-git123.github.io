@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/tumblr_a5cfd650e8226c6606a19837ceed15f7_748aa473_500.jpg
+image: img/houses.PNG
 title: "Public Housing Demand in Johannesburg"
 date: 2019
 published: true
@@ -13,26 +13,30 @@ summary: "This was an exploratory data analysis of a public housing applicant da
 ---
 
 Millions of people move to Johannesburg every year in search of opportunities, yet the housing market is not able to keep up with demand.
-The government's Department of Human Settlements fund housing programmes in all municpalities such as Johannesburg in order to provide housing to citizens.
-This project explores the housing applicant data for citizens in the City of Johannesburg which stood at approximately 450,000 applicants in 2018.
+The government's Department of Human Settlements has various housing programmes in all municpalities such as Johannesburg in order to provide housing subsidies to citizens. A housing subsidy is a once-off grant paid by government to qualifying beneficiaries for housing purposes. The grant is not paid in cash to beneficiaries but, rather, is paid to the seller of a house or, in new subsidised housing developments, the grant is used to construct a house. The title deed of the constructed house is then registered in the name of the beneficiary.
+
+This project explores the housing subsidy applicant data for citizens in the City of Johannesburg which stood at approximately 450,000 applicants in 2018.
 
 <div class="text-center p-4">
   <img width="600px" src="../img/4.PNG" class="img-thumbnail" >
 </div>
 
-This page is split into two sections and covers 5 insights I extracted from the dataset and also 5 things I did to clean the dataset and improve data quality.
+This page is split into two sections, Insights and Data Cleaning - and covers 5 insights I extracted from the dataset and also 5 things I did to clean the dataset and improve data quality. I have included snippets of the Python code used in my analysis and made use of the Seaborn library and Tableau to create data visulisations.
 
 # Insights
-I explored the data graphically using the Seaborn data visualisation library.
 
-### 1. I looked at the number of housing applications made from 1994 to 2018.
-- Apart from the initial spike when the housing program was launched, the top 3 years for housing applications were in 2008 (72,755 applications) followed by 2017 (47,642 applications) and 2000 (32,408 applications). 
+### 1. Number of housing applications made from 1994 to 2018
+- Apart from the initial spike when the housing program was launched, the top 3 years for housing applications were:
+  - 2008 (72,755 applications) 
+  - 2017 (47,642 applications)
+  - 2000 (32,408 applications)
 - The average number of applications over this period was 17,622.
 <div class="text-center p-4">
   <img width="400px" src="../img/application per year.PNG" class="img-thumbnail" >
 </div>
 
-### 2. Next I wanted to know how many housing applicants are there in each region of Johannesburg?
+### 2. Distribution of applicants across each region of Johannesburg
+- Region D has the most applicants. Soweto is located in Region D which is one of the most populated areas in Johannesburg. Soweto alone is home to 1.2 million people out of Johannesburg's 5.6 million population.
 ```cpp
 sns.countplot(x=newdf['Region '], order=['A','B','C','D','E','F','G'])
 ```
@@ -40,24 +44,28 @@ sns.countplot(x=newdf['Region '], order=['A','B','C','D','E','F','G'])
   <img width="400px" src="../img/Capture.PNG" class="img-thumbnail" >
 </div>
 
-- Region D has the most applicants which is expected as this were Soweto is located which has become one most highly populated areas in Johannesburg. Soweto alone is home to 1.2 million people of Johannesburg's 5.6 million population.
 
 <div class="text-center p-4">
   <img width="400px" src="../img/region count map.PNG" class="img-thumbnail" >
 </div>
 
 
-### 3. Next I looked at how many applicants there were in various monthly income brackets:
+### 3. Monthly income distribution of applicants:
+- One of the qualifying criteria an applicant has to meet in order to recieve a housing subsidy is to have an income below R3500.
 <div class="text-center p-4">
   <img width="400px" src="../img/2.PNG" class="img-thumbnail" >
 </div>
 
-### 4. Next I looked at the age distrubuition of applicants split by gender.
+### 4. Age distrubuition of applicants split by gender.
+- M = Male, F = Female, U = Unknown
+- The average age of male applicants is 49 years old.
+- The average age of female applicants is 47 years old.
+- There are more female applicants than male applicants (25,310 vs 20,2810)
 <div class="text-center p-4">
   <img width="400px" src="../img/gender applicants.PNG" class="img-thumbnail" >
 </div>
 
-### 5. Finally I looked at what Dwelling types applicants are staying in at the moment. 
+### 5. Current dwelling types of applicants. 
 - Most applicants for public housing are those living in informal dwelling types and likely have poor access to water, energy and sanitation services.
 <div class="text-center p-4">
   <img width="600px" src="../img/3.PNG" class="img-thumbnail" >
@@ -104,9 +112,7 @@ dtype: int64
 ```
 ## 1. Removing duplicate data
 - I identified duplicate entries based on the QuestionaireID field since each unique applicant should have a unique Questionnaire and only one entry in the applicant dataset. 
-- My analysis found over 14,000 duplicates in the dataset which were removed and reduced the number of unique applicants to 441,553.
-- The variable 'p' stores a boolean value which evaluates if a Questionaire ID is a duplicate or not.
-- The variable 'q' is a list that stores all the Questionaire ID values that evaluated to True and 14,238 duplicates were identified.
+- My analysis found 14,238 duplicates in the dataset which were removed and reduced the number of unique applicants to 441,553.
 
 ```cpp
 p = newdf.duplicated('QuestionaireID')
@@ -122,27 +128,15 @@ newdf.drop_duplicates(subset='QuestionaireID', keep='first',inplace=True)
 ```
 
 ## 2. Removing superfluous columns:
-- Province and Municipality are the same for the whole dataset --> "Gauteng" and "Johannesburg"
+- Province and Municipality are the same for the whole dataset ("Gauteng" and "Johannesburg")
 - Work telephone number, spouse age and spouse gender was provided by very few applicants and will not be useful for analysis of the main applicant.
 
 ```cpp
 newdf = newdf.drop(columns=['ProvinceID','Municipality','WorkTelNo','Spouse Age', 'Spouse GenderID'])
 ```
 
-These are the columns that are now left in the dataframe:
-
-```cpp
-newdf.columns
-
-Index(['TownName', 'Region ', 'Area', 'QuestionaireID', 'Registration Date',
-       'Year ', 'Month ', 'Day', 'StreetName', 'HouseNo', 'WardNo',
-       'HomeTelNo', 'CellNo', 'Relationship', 'Age Main Member',
-       'Gender Main Member', 'MonthlyIncome', 'HSS Status', 'DwellingType',
-       'EnergySource', 'Sanitation', 'Water', 'Disability'],
-      dtype='object')
-```
-
-## 3. Next up is filling the gaps or empty rows:
+## 3. Filling the gaps or empty rows:
+- Here I filled null values with a more relevant value is not data was provided.
 
 ```cpp
 newdf['StreetName'] = newdf['StreetName'].fillna('None')
@@ -209,7 +203,9 @@ array([0, '11', '2', '12', '121', '32', '23', '22', '21', '10', '1002',
 
 
 ## 5. Next I did an investigation of the applicant Age values by printing out the summary statstics for the column:
-
+- As shown in the output above the highest age entered is 1814 and lowest age is 0 indicating some data entry errors as these ages are unrealistic age values for an applicant and would skew the data.
+- In order to remove these outliers, I removed rows from the dataset where the age value was under 18 or over 100. This resulted in the removal of 648 rows.
+- Interestingly, there still appear to be some applicants where the age value is 100. This may be plausible but would require further investigation to ensure this is not a data error.
 ```cpp
 newdf['Age Main Member'].describe()
 count    441553.000000
@@ -222,8 +218,6 @@ min           0.000000
 max        1814.000000
 Name: Age Main Member, dtype: float64
 ```
-- As shown in the output above the highest age entered is 1814 and lowest age is 0 indicating some data entry errors as these ages are unrealistic age values for an applicant and would skew the data.
-- In order to remove these outliers, I removed rows from the dataset where the age value was under 18 or over 100. This resulted in the removal of 648 rows.
 
 ```cpp
 newdf.drop(newdf[newdf['Age Main Member']>100].index, inplace=True)
@@ -240,4 +234,4 @@ min          18.000000
 max         100.000000
 Name: Age Main Member, dtype: float64
 ```
-- Interestingly, there still appear to be some applicants where the age value is 100. This may be plausible but would require further investigation to ensure this is not a data error.
+
