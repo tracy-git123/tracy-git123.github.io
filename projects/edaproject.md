@@ -202,10 +202,11 @@ array([0, '11', '2', '12', '121', '32', '23', '22', '21', '10', '1002',
 ```
 
 
-## 5. Next I did an investigation of the applicant Age values by printing out the summary statstics for the column:
+## 5. Investigation of applicant Age values:
 - As shown in the output above the highest age entered is 1814 and lowest age is 0 indicating some data entry errors as these ages are unrealistic age values for an applicant and would skew the data.
 - In order to remove these outliers, I removed rows from the dataset where the age value was under 18 or over 100. This resulted in the removal of 648 rows.
 - Interestingly, there still appear to be some applicants where the age value is 100. This may be plausible but would require further investigation to ensure this is not a data error.
+
 ```cpp
 newdf['Age Main Member'].describe()
 count    441553.000000
