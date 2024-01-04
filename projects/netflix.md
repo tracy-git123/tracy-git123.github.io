@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/micromouse/micromouse-square.jpg
+image: img/368-3681800_netflix-png-transparent-image-netflix-png.png
 title: "Netflix Wrapped"
 date: 2023
 published: true
