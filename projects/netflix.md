@@ -4,7 +4,7 @@ type: project
 image: img/micromouse/micromouse-square.jpg
 title: "Netflix Wrapped"
 date: 2023
-published: false
+published: true
 labels:
   - Data visualistion
   - Data story
