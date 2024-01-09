@@ -4,7 +4,8 @@ type: project
 image: img/TV shows and movies.png
 title: "Netflix Wrapped"
 date: 2023
-published: true
+draft: true
+#published: true
 labels:
   - Data visualistion
   - Data story
