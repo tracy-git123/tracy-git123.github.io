@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/368-3681800_netflix-png-transparent-image-netflix-png.png
+image: img/TV shows and movies.png
 title: "Netflix Wrapped"
 date: 2023
 published: true
@@ -24,7 +24,7 @@ Below I'll take you through what I did to prepare the data and what findings eme
 
 # Genres watched
 
-<img class="img-fluid" src="../img/vacay/vacay-home-page.png">
+<img class="img-fluid" src="../img/netflix_genres.png">
 
 ## Data prep
 My initial plan was to use an official Netflix API to pull the genre values for each title in my watch history but it turns out	there is no API because apparently in a letter to developers, Netflix explained that “To better focus our efforts and to align them with the needs of our global member base,” the company would shut down its public API. Reelgood could have stood in this gap but it was too costly to pay for. So instead I consulted IMDB, pulled the genre categories used in the filter feature and create 2 new fields for genre category. Finally I manually assigned a primary category and, in some cases, a secondary category for each title in my list.
@@ -41,7 +41,7 @@ With Documentaries being my 2nd favourite genre I really appreciate Netflix’s 
 
 # Bingeing habits 🍿
 
-<img class="img-fluid" src="../img/vacay/vacay-home-page.png">
+<img class="img-fluid" src="../img/netflix_radial_plot.png">
 
 ## Data prep
 Here I had to ensure I had clean and well-formatted data in the ‘date_watched’ field of my dataframe. Additionally it was important to have a ‘title’ and an ‘episode_name’ field to differentiate and enable me to count unique show or movie titles and unique episodes which may be part of a series. In hindsight I could have included additional field for ‘season’ for cases where I watched multiple seasons of the same title, however the naming convention around this is not always consistent for example:
