@@ -13,7 +13,7 @@ labels:
 summary: "Similar to Spotify Wrapped, I created data visualisations of my Netflix watch history data for 2023."
 ---
 
-Visualisations created include:
+Visualisations I created include:
 * Genres
 * Watch speed for series
 * Highest viewing months
