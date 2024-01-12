@@ -15,7 +15,8 @@ summary: "Riding on the wave Spotify Wrapped, I was inspired to create 5 data vi
 ---
 If you are unfamiliar with [Spotify Wrapped](https://en.wikipedia.org/wiki/Spotify_Wrapped) it's an end-of-year review of listening habits on the platform. Despite having a wealth of data, Netflix does not give users any personalised insights into their watching habits so I decided to take on the project for myself and call it Netflix Wrapped.
 
-> Netflix Wrapped was written using Python and Matplotlib. Within a week I was able to download my usage data, clean the data and create 5 > > data visualisations. Through this project, I gained experience with creating:
+> Netflix Wrapped was written using Python and Matplotlib. Within a week I was able to download my usage data, clean the data and create 5
+> data visualisations. Through this project, I gained experience with creating:
 > * radial graphs
 > * dumbbell graphs
 > * radar graphs
