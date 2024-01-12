@@ -25,8 +25,8 @@ Below I'll take you through what I did to prepare the data and what findings eme
 
 **Genres watched**
 
-<div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
-    <img style="width: 400px; margin: 0;" class="rounded" src="..img/netflix_genres.png" >
+<div style="display: flex; justify-content: center; align-items: center; height: 10vh;">
+    <img width="400px" class="rounded float-start pe-1" src="../img/netflix_genres.png">
 </div>
 
 
@@ -52,7 +52,6 @@ Binge-watching peaked in March for me, when I watched 3 different game shows fro
     <img width="400px" class="rounded float-start pe-1" src="../img/netflix_map (2).png">
 </div>
 
- <img width="400px" class="rounded float-start pe-1" src="../img/netflix_map (2).png">
 I have always considered my taste in entertainment to be very diverse and global but I wondered if the data would match up. I think TV and movies are great ways to explore new perspectives and places with relative ease. For this visualization I categorized my viewing history based on the language and/or filming location of each title. Here I wanted to see what titles I watched that originated outside of Hollywood and the USA. I have managed to watch several South African (also known as Mzansi), Brazilian, and Kenyan titles but most bizarrely 2023 had been the year of Austrailian content for me and I watched 6 titles from down under. "                                                                                   
 
 
