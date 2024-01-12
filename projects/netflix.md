@@ -31,16 +31,16 @@ Here I pulled the 27 genre categories used on the IMDB and categorised every tit
 
 ### 🍿 Binge-watching 
 
-| <img width="400px" class="img-fluid"  src="../img/netflix_radial_plot.png"> |**Key Stats** + In 2023 I watched 450 unique titles. + 67 of these were once-off shows or movies and 383 were episodes in a series. + Fastest watch time: 8 episodes in 1 day 🏁 |
+**Key Stats** 
++ In 2023 I watched 450 unique titles.
++ 67 of these were once-off shows or movies and 383 were episodes in a series.
++ Fastest watch time: 8 episodes in 1 day 🏁 
 
+<img width="400px" class="img-fluid"  src="../img/netflix_radial_plot.png"> 
 
-| Column A                  | Column B                                                         |
-|---------------------------|-------------------------------------------------------------------|
-| <img width="400px" class="img-fluid"  src="../img/netflix_radial_plot.png">| One sentence followed by three bullet points: - Bullet Point 1 - Bullet Point 2 - Bullet Point 3 |
+It’s well-known that many video streaming platforms like Netflix and YouTube are built to keep you watching so you could say binge-watching is a key marker of success for these platforms. And let’s just say the house always wins. Binge-watching peaked in March for me, when I watched 3 different game shows from start to finish. In September my viewing peaked again with 55 titles watched, which coincided with the much-anticipated drop of the final season of _Sex Education_. 
 
-It’s well-known that many video streaming platforms like Netflix and YouTube are built to keep you watching so you could say binge-watching is a key marker of success for these platforms. And let’s just say the house always wins.
- 
-Binge-watching peaked in March for me, when I watched 3 different game shows from start to finish. In September my viewing peaked again with 55 titles watched, which coincided with the much-anticipated drop of the final season of _Sex Education_. When I looked deeper into why I watched 20 episodes of _Sex Education_ in September it was clear that after watching the 8 episodes of the final season I had a period of withdrawal about the show being over and proceeded to watch 12 more episodes from previous seasons. In my essay, I further discuss the pros and cons of the binge-watching strategy employed by Netflix.
+When I looked deeper into why I watched 20 episodes of _Sex Education_ in September it was clear that after watching the 8 episodes of the final season I had a period of withdrawal about the show being over and proceeded to watch 12 more episodes from previous seasons. In my essay, I further discuss the pros and cons of the binge-watching strategy employed by Netflix.
 
 <img width="700px" class="img-fluid"  src="../img/netflix_fastest.png">
 
