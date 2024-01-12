@@ -25,11 +25,11 @@ Below I'll take you through what I did to prepare the data and what findings eme
 
 **Genres watched**
 
-<div style="display: flex; justify-content: center; align-items: center; height: 10vh;">
-    <img width="400px" img-fluid src="../img/netflix_genres.png">
+<div style="display: flex; justify-content: center; align-items: center; height: 300vh;">
+    <img width="400px" class="img-fluid" src="../img/netflix_genres.png">
 </div>
 
-<img width="600px" img-fluid src="../img/netflix_genres.png">
+<img width="600px" class="img-fluid" src="../img/netflix_genres.png">
 Here I pulled the 27 genre categories used on the IMDB and categorised every title on my list into a primary genre and secondary genre where necessary. One title represents a unique TV show or Movie title. <\b> My top 5 favourite genres were Comedy, Documentary, Drama, Game-shows, with Thrillers, Crime and Animation tied for fifth place.                                                                                                                                                                                                                                 **Binge-watching 🍿** 
 
 <div style="display: flex; justify-content: center; align-items: center; height: 100vh;">
