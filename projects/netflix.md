@@ -4,8 +4,8 @@ type: project
 image: img/TV shows and movies.png
 title: "Netflix Wrapped"
 date: 2023
-draft: true
-#published: true
+#draft: true
+published: true
 labels:
   - Data visualistion
   - Data story
@@ -40,9 +40,11 @@ Here I pulled the 27 genre categories used on the IMDB and categorised every tit
 
 It’s well-known that many video streaming platforms like Netflix and YouTube are built to keep you watching so you could say binge-watching is a key marker of success for these platforms. And let’s just say the house always wins. Binge-watching peaked in March for me, when I watched 3 different game shows from start to finish. In September my viewing peaked again with 55 titles watched.
 
-A closer look at September revealed that 20 of the 55 were episodes of _Sex Education_. Based on the order the episode were watched it was clear that after watching the 8 episodes of the final season, I then watched 12 more episodes from previous seasons. This clearly look the signs of withdrawal because the show was over. In my essay, I further discuss the pros and cons of the binge-watching strategy employed by Netflix.
+A closer look at September revealed that 20 of the 55 were episodes of _Sex Education_. Based on the order the episode were watched it was clear that after watching the 8 episodes of the final season, I then watched 12 more episodes from previous seasons. This look the signs of withdrawal because the show was over. In my essay, I further discuss the pros and cons of the binge-watching strategy employed by Netflix.
 
 <img width="700px" class="img-fluid"  src="../img/netflix_fastest.png">
+
+
 
 ## ✈️ Geographic spread 
 
