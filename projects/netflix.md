@@ -37,8 +37,8 @@ My top 5 favourite genres were Comedy, Documentary, Drama, Game-shows, with Thri
 
 # Bingeing habits 🍿
 
-<img width="600px" 
-     class="rounded float-start pe-3" 
+<img width="400px" 
+     class="rounded float-start pe-4" 
      src="../img/netflix_radial_plot.png">
 
 ## Data prep
