@@ -25,14 +25,16 @@ Below I'll take you through what I did to prepare the data and what findings eme
 
 **Genres watched**
 
-<img width="400px" class="img-fluid" src="../img/netflix_genres.png">
+<img width="500px" class="img-fluid" src="../img/netflix_genres.png">
 
 Here I pulled the 27 genre categories used on the IMDB and categorised every title on my list into a primary genre and secondary genre where necessary. One title represents a unique TV show or Movie title. <\b> My top 5 favourite genres were Comedy, Documentary, Drama, Game-shows, with Thrillers, Crime and Animation tied for fifth place.                                                                                                                                                                                                                                 **Binge-watching 🍿** 
 
-| <img width="500px" class="img-fluid"  src="../img/netflix_radial_plot.png"> | <img width="600px" class="img-fluid"  src="../img/netflix_fastest.png"> |
+| <img width="350px" class="img-fluid"  src="../img/netflix_radial_plot.png"> | <img width="700px" class="img-fluid"  src="../img/netflix_fastest.png"> |
 
 **Key Stats** 
-  + In 2023 I watched 450 unique titles.                                                                                                       + 67 of these were once-off shows or movies and 383 were episodes in a series.                                                               + Fastest watch time: 8 episodes in 1 day 🏁 
+  + In 2023 I watched 450 unique titles.
+  + 67 of these were once-off shows or movies and 383 were episodes in a series.
+  + Fastest watch time: 8 episodes in 1 day 🏁 
 
 <img width="600px" class="img-fluid"  src="../img/netflix_fastest.png">
 
@@ -42,7 +44,7 @@ Binge-watching peaked in March for me, when I watched 3 different game shows fro
   
 **Places I went with Netflix Airlines**  
 
-<img width="500px" class="img-fluid" src="../img/netflix_map (2).png">
+<img width="600px" class="img-fluid" src="../img/netflix_map (2).png">
 
 I have always considered my taste in entertainment to be very diverse and global but I wondered if the data would match up. I think TV and movies are great ways to explore new perspectives and places with relative ease. For this visualization I categorized my viewing history based on the language and/or filming location of each title. Here I wanted to see what titles I watched that originated outside of Hollywood and the USA. I have managed to watch several South African (also known as Mzansi), Brazilian, and Kenyan titles but most bizarrely 2023 had been the year of Austrailian content for me and I watched 6 titles from down under. "                                                                                   
 
