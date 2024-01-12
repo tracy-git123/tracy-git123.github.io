@@ -51,39 +51,14 @@ It’s well-known that many video streaming platforms like Netflix and Youtube a
 
 Binge-watching peaked in March for me, when I watched 3 different game shows from start to finish. In September my viewing peaked again with 55 titles watched, which coincided with the much-anticipated drop of the final season of _Sex Education_. When I looked deeper into why I watched 20 episodes of _Sex Education_ in September it was clear that after watching the 8 episodes of the final season I had a period of withdrawal about the show being over and proceeded to watch 12 more episodes from previous seasons. In my essay, I further discuss the pros and cons of the binge-watching strategy employed by Netflix.
 
-​​# Places I went with Netflix Airlines  ✈️ 
+​# Places I went with Netflix Airlines 
 
 <img width="400px" 
      class="rounded float-start pe-4" 
      src="../img/netflix_map (1).png">
      
-I have always considered my taste in entertainment to be very diverse and global but I wondered if the data would match up.
-For this visualization I categorized my viewing history manually by recalling the language and location of each title. 
+I have always considered my taste in entertainment to be very diverse and global but I wondered if the data would match up. I think TV and movies are great ways to explore new perspectives and places with relative ease. For this visualization I categorized my viewing history based on the language and/or filming location of each title. Here I wanted to what titles I watched that originated outside of Hollywood and the USA.
 
-Again I briefly considered using the IMDB API but abandoned that idea because only a handful of shows are from outside Hollywood so there was minimal classification to do.
-
-For this visualisation the map, labels and dots were the easy part. I spent the longest time trying to get the lines to be drawn in a neat way. I eventually settled on writing code for the lines to be drawn between points which were in a similar latitude or longitude range but upon closer inspection the locations are just connected in the descending order as they appear in the data. Sometimes complex code is road to nowhere.
-
-Findings
-
-I think TV and movies are great ways to explore new perspectives and places and venture out of your comfort zone with relative ease and at a low lost. I’ve truly enjoyed going off the beaten path of Hollywood and being immersed in strange new contexts and storylines. 
-
-It’s awesome to see the incredible amount of non-American content Netflix actually has available. I have managed to watch several Brazilian, South African and Kenyan titles but most bizarrely 2023 has been the year of Austrailian content for me. Although unremarkably all English content, there have been strong contenders like the funny Gen-X show Why Are You Like This? or the dry-humor from Fisk which might make you nostalgic for The Office - George has cemented his own place as an iconic receptionist next to Pam. (It’s also so strange to find a show where netball features so prominently in the script. Netball had a glo-up!) An honourable mention must also go to the migrant-drama Stateless for excellent acting and gripping story-telling. 
-
-It also seems that any foreign-language content I watch seems to overlap with the many languages I am juggling in Duolingo. I’m always so impressed by the movies that come out of Kenya for how gritty and real they are. Veve in particular had really tight and compelling story paired with some excellent acting performances - who knew Savara from Sauti Sol could act like that and seamless weave singing into his character, genius.  Although I was almost completely reliant on the subtitles I still enjoyed the French comedy Nothing to Hide (also can someone explain to me if all foreign-language films have an English title? Because that would mean we are totally judging a book by it’s cover.)
-
-The one Brazilian show I watched really opened my eyes to a culture so different to mine - one where the host does unnecessary stunts like climbing a ladder in 10 inch heels and where people have really tenuous relationships with the mother-in-laws. It was truly an emotional roller-coaster.
-
-Remarks: 
-Am I obsessed with Australia? 🦘
-
-My taste is somewhat global but I watched 6 shows this year from Australia this year, mostly comedy. 😂
-
-Faves:
-✴️Fisk
-✴️
-✴️The Mole 
-
-(Yes I left out all the content I watched from America because obvs most content comes from there so I wouldn’t bore you with that detail.)
+I have managed to watch several South African (also known as Mzansi), Brazilian, and Kenyan titles but most bizarrely 2023 had been the year of Austrailian content for me and I watch 6 titles from down under. 
 
 
