@@ -31,16 +31,12 @@ Here I pulled the 27 genre categories used on the IMDB and categorised every tit
 
 ### 🍿 Binge-watching 
 
-| <img width="400px" class="img-fluid"  src="../img/netflix_radial_plot.png"> |**Key Stats** 
-+ In 2023 I watched 450 unique titles.
-+ 67 of these were once-off shows or movies and 383 were episodes in a series.
-+ Fastest watch time: 8 episodes in 1 day 🏁 |
+| <img width="400px" class="img-fluid"  src="../img/netflix_radial_plot.png"> |**Key Stats** + In 2023 I watched 450 unique titles. + 67 of these were once-off shows or movies and 383 were episodes in a series. + Fastest watch time: 8 episodes in 1 day 🏁 |
 
 
-|  <img width="400px" class="img-fluid"  src="../img/netflix_radial_plot.png"> | **Key Stats**   |
-|                           | - In 2023 I watched 450 unique titles.                               |
-|                           | - 67 of these were once-off shows or movies and 383 were episodes in a series.                               |
-|                           | -Fastest watch time: 8 episodes in 1 day 🏁                                 |
+| Column A                  | Column B                                                         |
+|---------------------------|-------------------------------------------------------------------|
+| <img width="400px" class="img-fluid"  src="../img/netflix_radial_plot.png">| One sentence followed by three bullet points: - Bullet Point 1 - Bullet Point 2 - Bullet Point 3 |
 
 It’s well-known that many video streaming platforms like Netflix and YouTube are built to keep you watching so you could say binge-watching is a key marker of success for these platforms. And let’s just say the house always wins.
  
