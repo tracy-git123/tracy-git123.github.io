@@ -24,24 +24,23 @@ Netflix Wrapped was written using Python and Matplotlib. Within a week I was abl
 Below I'll take you through what I did to prepare the data and what findings emerged. See my Netflix Wrapped essay for an extended discussion on what transpired during this project.
 
 # Genres watched
-<img width="400px" 
-     class="rounded float-start pe-4" 
-     src="../img/netflix_genres.png">
 
-Here I pulled the 27 genre categories used on the IMDB and categorised every title on my list into a primary genre and secondary genre where necessary. One title represents a unique TV show or Movie title.
+| <img width="400px" class="rounded float-start pe-4" src="../img/netflix_genres.png"> | Here I pulled the 27 genre categories used on the IMDB and categorised every title on my list into a primary genre and secondary genre where necessary. One title represents a unique TV show or Movie title.
 
-My top 5 favourite genres were Comedy, Documentary, Drama, Game-shows, with Thrillers, Crime and Animation tied for fifth place. 
+My top 5 favourite genres were Comedy, Documentary, Drama, Game-shows, with Thrillers, Crime and Animation tied for fifth place. |
+|---|
 
 
 # Bingeing-watching 🍿
 
-<img width="400px" 
+| <img width="400px" 
      class="rounded float-start pe-4" 
-     src="../img/netflix_radial_plot.png">
-
+     src="../img/netflix_radial_plot.png"> |
+|---|
 <img width="400px" 
      class="rounded float-start pe-4" 
      src="../img/netflix_fastest.png">
+|---|
 
 It’s well-known that many video streaming platforms like Netflix and Youtube are built to keep you watching so you could say binge-watching is a key marker of success for these platforms. And let’s just say the house always wins.
 
