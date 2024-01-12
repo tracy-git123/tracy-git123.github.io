@@ -15,64 +15,76 @@ summary: "Riding on the wave Spotify Wrapped, I was inspired to create 5 data vi
 ---
 If you are unfamiliar with [Spotify Wrapped](https://en.wikipedia.org/wiki/Spotify_Wrapped) it's an end-of-year review of listening habits on the platform. Despite having a wealth of data, Netflix does not give users any personalised insights into their watching habits so I decided to take on the project for myself and call it Netflix Wrapped.
 
-Netflix Wrapped was written using Python and Matplotlib. Within a week I was able to download my usage data, clean the data and create 5 data visualisations. Through this project I gained experience with creating:
+Netflix Wrapped was written using Python and Matplotlib. Within a week I was able to download my usage data, clean the data and create 5 data visualisations. Through this project, I gained experience with creating:
 * radial graphs
 * dumb bell graphs
 * radar graphs
 * maps
 
-Below I'll take you through what I did to prepare the data and what findings emerged. See my Netflix Wrapped essay for an extended discussion on what transpired during in this project.
+Below I'll take you through what I did to prepare the data and what findings emerged. See my Netflix Wrapped essay for an extended discussion on what transpired during this project.
 
 # Genres watched
 <img width="400px" 
      class="rounded float-start pe-4" 
      src="../img/netflix_genres.png">
 
-## Data prep
-I consulted IMDB, pulled their 27 genre categories and created 2 new fields for genre category: a primary category and, in some cases, a secondary category for each title in my list. (One title represents a unique TV show or Movie title)
+Here I pulled the 27 genre categories used on the IMDB and categorised every title on my list into a primary genre and secondary genre where necessary. One title represents a unique TV show or Movie title.
 
-## Findings
 My top 5 favourite genres were Comedy, Documentary, Drama, Game-shows, with Thrillers, Crime and Animation tied for fifth place. 
 
 
-# Bingeing habits 🍿
+# Bingeing-watching 🍿
 
 <img width="400px" 
      class="rounded float-start pe-4" 
      src="../img/netflix_radial_plot.png">
 
-## Data prep
-Here I had to ensure I had clean and well-formatted data in the ‘date_watched’ field of my dataframe. Additionally it was important to have a ‘title’ and an ‘episode_name’ field to differentiate and enable me to count unique show or movie titles and unique episodes which may be part of a series. In hindsight I could have included additional field for ‘season’ for cases where I watched multiple seasons of the same title, however the naming convention around this is not always consistent for example:
+<img width="400px" 
+     class="rounded float-start pe-4" 
+     src="../img/netflix_fastest.png">
 
-|Title                                                                                    |
-|------------------------------------------------------------------------------------|
-| Adventure Time: Season 4: In Your Footsteps / Hug Wolf                             | {Title} {Subtitle} {Season} {Episode name}
-| BEEF: Season 1: Figures of Light                                                   | (Title) [Season] {Episode name}
-| Astronomy Club: The Sketch Show: Season 1: Lamp Room                               | Title - Subtitle - Season - Episode name
-|------------------------------------------------------------------------------------|
-| Larry Charles' Dangerous World of Comedy: Season 1: Part 3: Race                   |
-| Kaleidoscope: Limited Series: Red (The Morning After the Heist)                    |{Title}/{Series type}/{Episode name}
-| Stateless: Limited Series: The Seventh Circle                                      |{Title / Series type / Episode name
-| Big Vape: The Rise and Fall of Juul: Limited Series: Overnight Billionaires        |
-|------------------------------------------------------------------------------------|
+It’s well-known that many video streaming platforms like Netflix and Youtube are built to keep you watching so you could say binge-watching is a key marker of success for these platforms. And let’s just say the house always wins.
 
-|                                                                                    |
-| Top Boy: Summerhouse: Series 2: Episode 1                                          |
-| Top Boy: Season 3: If We Are Not Monsters                                          |
-|                                                                                    |
-| Master of None: Season 3: Moments in Love, Chapter 2                               |
-|                                                                                    |
-| RuPaul's Drag Race: Season 9: She Done Already Done Brought It On                  |
-| RuPaul’s Drag Race: All Stars: Season 6: Rumerican Horror Story: Coven Girls       |
-|                                                                                    |
-| Babies: Part 2: Movement                                                           |
-| Avatar: The Last Airbender: Book 1: The Warriors of Kyoshi                         |
-| jeen-yuhs: A Kanye Trilogy: act i: VISION                                          |
-|                                                                                    |
-| Bad Sport: Volume 1: Fallen Idol                                                   |
-| Patriot Act with Hasan Minhaj: Volume 4: Why Your Public Transportation Sucks      |
-| Dear White People: Volume 1: Chapter I                                             |
-|                                                                                    |
-| BoJack Horseman: Season 1: BoJack Horseman: The BoJack Horseman Story, Chapter One |
+## Key Stats
+- In 2023 I watched 450 unique titles. 
+- 67 of these were once-off shows or movies and 383 were episodes in a series.
+- Fastest watch time: 8 episodes in 1 day 🏁 
+
+Binge-watching peaked in March for me, when I watched 3 different game shows from start to finish. In September my viewing peaked again with 55 titles watched, which coincided with the much-anticipated drop of the final season of _Sex Education_. When I looked deeper into why I watched 20 episodes of _Sex Education_ in September it was clear that after watching the 8 episodes of the final season I had a period of withdrawal about the show being over and proceeded to watch 12 more episodes from previous seasons. In my essay, I further discuss the pros and cons of the binge-watching strategy employed by Netflix.
+
+​​# Places I went with Netflix Airlines  ✈️ 
+
+<img width="400px" 
+     class="rounded float-start pe-4" 
+     src="../img/netflix_map (1).png">
+     
+I have always considered my taste in entertainment to be very diverse and global but I wondered if the data would match up.
+For this visualization I categorized my viewing history manually by recalling the language and location of each title. 
+
+Again I briefly considered using the IMDB API but abandoned that idea because only a handful of shows are from outside Hollywood so there was minimal classification to do.
+
+For this visualisation the map, labels and dots were the easy part. I spent the longest time trying to get the lines to be drawn in a neat way. I eventually settled on writing code for the lines to be drawn between points which were in a similar latitude or longitude range but upon closer inspection the locations are just connected in the descending order as they appear in the data. Sometimes complex code is road to nowhere.
+
+Findings
+
+I think TV and movies are great ways to explore new perspectives and places and venture out of your comfort zone with relative ease and at a low lost. I’ve truly enjoyed going off the beaten path of Hollywood and being immersed in strange new contexts and storylines. 
+
+It’s awesome to see the incredible amount of non-American content Netflix actually has available. I have managed to watch several Brazilian, South African and Kenyan titles but most bizarrely 2023 has been the year of Austrailian content for me. Although unremarkably all English content, there have been strong contenders like the funny Gen-X show Why Are You Like This? or the dry-humor from Fisk which might make you nostalgic for The Office - George has cemented his own place as an iconic receptionist next to Pam. (It’s also so strange to find a show where netball features so prominently in the script. Netball had a glo-up!) An honourable mention must also go to the migrant-drama Stateless for excellent acting and gripping story-telling. 
+
+It also seems that any foreign-language content I watch seems to overlap with the many languages I am juggling in Duolingo. I’m always so impressed by the movies that come out of Kenya for how gritty and real they are. Veve in particular had really tight and compelling story paired with some excellent acting performances - who knew Savara from Sauti Sol could act like that and seamless weave singing into his character, genius.  Although I was almost completely reliant on the subtitles I still enjoyed the French comedy Nothing to Hide (also can someone explain to me if all foreign-language films have an English title? Because that would mean we are totally judging a book by it’s cover.)
+
+The one Brazilian show I watched really opened my eyes to a culture so different to mine - one where the host does unnecessary stunts like climbing a ladder in 10 inch heels and where people have really tenuous relationships with the mother-in-laws. It was truly an emotional roller-coaster.
+
+Remarks: 
+Am I obsessed with Australia? 🦘
+
+My taste is somewhat global but I watched 6 shows this year from Australia this year, mostly comedy. 😂
+
+Faves:
+✴️Fisk
+✴️
+✴️The Mole 
+
+(Yes I left out all the content I watched from America because obvs most content comes from there so I wouldn’t bore you with that detail.)
 
 
