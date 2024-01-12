@@ -25,26 +25,26 @@ Below I'll take you through what I did to prepare the data and what findings eme
 
 ## Genres watched
 
-<img width="400px" class="rounded float-start pe-4" src="../img/netflix_genres.png"> | Here I pulled the 27 genre categories used on the IMDB and categorised every title on my list into a primary genre and secondary genre where necessary. One title represents a unique TV show or Movie title.
+| <img width="400px" class="rounded float-start pe-4" src="../img/netflix_genres.png"> | Here I pulled the 27 genre categories used on the IMDB and categorised every title on my list into a primary genre and secondary genre where necessary. One title represents a unique TV show or Movie title.
 My top 5 favourite genres were Comedy, Documentary, Drama, Game-shows, with Thrillers, Crime and Animation tied for fifth place. 
 
 
 
 ## Bingeing-watching 🍿
 
-| <img width="400px" class="rounded float-start pe-4" 
-  src="../img/netflix_radial_plot.png"> | It’s well-known that many video streaming platforms like Netflix and Youtube are built to keep you watching so you could say binge-watching is a key marker of success for these platforms. And let’s just say the house always wins.
-
+| <img width="400px" class="rounded float-start pe-4" src="../img/netflix_radial_plot.png"> | 
 **Key Stats**
 - In 2023 I watched 450 unique titles. 
 - 67 of these were once-off shows or movies and 383 were episodes in a series.
-- Fastest watch time: 8 episodes in 1 day 🏁 |
+- Fastest watch time: 8 episodes in 1 day 🏁
 
-| <img width="400px" 
+It’s well-known that many video streaming platforms like Netflix and Youtube are built to keep you watching so you could say binge-watching is a key marker of success for these platforms. And let’s just say the house always wins.
+
+| <img width="600px" 
      class="rounded float-start pe-4" 
      src="../img/netflix_fastest.png"> |
 
-Binge-watching peaked in March for me, when I watched 3 different game shows from start to finish. In September my viewing peaked again with 55 titles watched, which coincided with the much-anticipated drop of the final season of _Sex Education_. When I looked deeper into why I watched 20 episodes of _Sex Education_ in September it was clear that after watching the 8 episodes of the final season I had a period of withdrawal about the show being over and proceeded to watch 12 more episodes from previous seasons. In my essay, I further discuss the pros and cons of the binge-watching strategy employed by Netflix.|
+Binge-watching peaked in March for me, when I watched 3 different game shows from start to finish. In September my viewing peaked again with 55 titles watched, which coincided with the much-anticipated drop of the final season of _Sex Education_. When I looked deeper into why I watched 20 episodes of _Sex Education_ in September it was clear that after watching the 8 episodes of the final season I had a period of withdrawal about the show being over and proceeded to watch 12 more episodes from previous seasons. In my essay, I further discuss the pros and cons of the binge-watching strategy employed by Netflix.
 
 ## Places I went with Netflix Airlines 
 
