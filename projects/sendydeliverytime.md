@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/sendy-delivery-1024x669.jpg
+image: img/sendy-delivery-1024x669.png
 title: "Predicting Delivery Arrival Time - Sendy"
 date: 2020
 published: true
