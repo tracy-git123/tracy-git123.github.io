@@ -9,10 +9,9 @@ labels:
   - Data Analysis
   - Film & TV
   - Entertainment
-
 ---
 
-### Genres watched
+## Genres watched
 
 **Data prep**
 My initial plan was to use an official Netflix API to pull the genre values for each title in my watch history but it turns out	there is no API because apparently in a letter to developers, Netflix explained that “To better focus our efforts and to align them with the needs of our global member base,” the company would shut down its public API. Reelgood could have stood in this gap but it was too costly to pay for. So instead I consulted IMDB, pulled the genre categories used in the filter feature and created 2 new fields for genre category. Finally I manually assigned a primary category and, in some cases, a secondary category for each title in my list.
