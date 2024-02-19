@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/houses (1).PNG
+image: img/houses.png
 title: "Public Housing Demand in Johannesburg"
 date: 2019
 published: true
