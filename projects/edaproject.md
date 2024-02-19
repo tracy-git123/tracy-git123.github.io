@@ -13,7 +13,7 @@ summary: "This was an exploratory data analysis of a public housing applicant da
 ---
 
 Millions of people move to Johannesburg every year in search of opportunities, yet the housing market is not able to keep up with demand.
-The government's Department of Human Settlements has various housing programmes in all municpalities such as Johannesburg in order to provide housing subsidies to citizens. A housing subsidy is a once-off grant paid by government to qualifying beneficiaries for housing purposes. The grant is not paid in cash to beneficiaries but, rather, is paid to the seller of a house or, in new subsidised housing developments, the grant is used to construct a house. The title deed of the constructed house is then registered in the name of the beneficiary.
+The government's Department of Human Settlements has various housing programs in all municipalities such as Johannesburg to provide housing subsidies to citizens. A housing subsidy is a once-off grant paid by the government to qualifying beneficiaries for housing purposes. The grant is not paid in cash to beneficiaries but, rather, is paid to the seller of a house or, in new subsidised housing developments, the grant is used to construct a house. The title deed of the constructed house is then registered in the name of the beneficiary.
 
 This project explores the housing subsidy applicant data for citizens in the City of Johannesburg which stood at approximately 450,000 applicants in 2018.
 
@@ -51,12 +51,12 @@ sns.countplot(x=newdf['Region '], order=['A','B','C','D','E','F','G'])
 
 
 ### 3. Monthly income distribution of applicants:
-- One of the qualifying criteria an applicant has to meet in order to recieve a housing subsidy is to have an income below R3500.
+- One of the qualifying criteria an applicant has to meet in order to receive a housing subsidy is to have an income below R3500.
 <div class="text-center p-4">
   <img width="400px" src="../img/2.PNG" class="img-thumbnail" >
 </div>
 
-### 4. Age distrubuition of applicants split by gender.
+### 4. Age distribution of applicants split by gender.
 - M = Male, F = Female, U = Unknown
 - The average age of male applicants is 49 years old.
 - The average age of female applicants is 47 years old.
@@ -74,7 +74,7 @@ sns.countplot(x=newdf['Region '], order=['A','B','C','D','E','F','G'])
 # Data Cleaning
 Below is a breakdown of how I explored and cleaned the public housing applicant dataset.
 
-Here is a summary of rows which have data in each column and as we can see several columns have data gaps where no values were entered:
+Here is a summary of rows that have data in each column and as we can see several columns have data gaps where no values were entered:
 
 ```cpp
 newdf.count()
@@ -129,7 +129,7 @@ newdf.drop_duplicates(subset='QuestionaireID', keep='first',inplace=True)
 
 ## 2. Removing superfluous columns:
 - Province and Municipality are the same for the whole dataset ("Gauteng" and "Johannesburg")
-- Work telephone number, spouse age and spouse gender was provided by very few applicants and will not be useful for analysis of the main applicant.
+- Work telephone number, spouse age and spouse gender were provided by very few applicants and will not be useful for analysis of the main applicant.
 
 ```cpp
 newdf = newdf.drop(columns=['ProvinceID','Municipality','WorkTelNo','Spouse Age', 'Spouse GenderID'])
@@ -154,7 +154,7 @@ newdf['Water'] = newdf['Water'].fillna('12. Unknown')
 ```
 
 ## 4. Investigation of Ward number values:
-- As shown by output below, I found that the Ward number column is filled with poorly formatted data, inconsistent data types and string values, where only integers are expected. The quality of the data would not good enough to use in analysis so I removed this column with a plan to rebuild it later.
+- As shown by output below, I found that the Ward number column is filled with poorly formatted data, inconsistent data types and string values, where only integers are expected. The quality of the data would not be good enough to use in the analysis so I removed this column with a plan to rebuild it later.
 
 ```cpp
 newdf['WardNo'].unique()
@@ -203,7 +203,7 @@ array([0, '11', '2', '12', '121', '32', '23', '22', '21', '10', '1002',
 
 
 ## 5. Investigation of applicant Age values:
-- As shown in the output above the highest age entered is 1814 and lowest age is 0 indicating some data entry errors as these ages are unrealistic age values for an applicant and would skew the data.
+- As shown in the output above the highest age entered is 1814 and the lowest age is 0 indicating some data entry errors as these ages are unrealistic age values for an applicant and would skew the data.
 - In order to remove these outliers, I removed rows from the dataset where the age value was under 18 or over 100. This resulted in the removal of 648 rows.
 - Interestingly, there still appear to be some applicants where the age value is 100. This may be plausible but would require further investigation to ensure this is not a data error.
 
