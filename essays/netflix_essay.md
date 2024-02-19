@@ -14,6 +14,7 @@ labels:
 ## Genres watched
 
 **Data prep**
+
 Step 1: Organise the data according to genre.
 
 My initial plan was to use an official Netflix API to pull the genre values for each title in my watch history but it turns out	there is no API because apparently, Netflix put out a statement saying that “To better focus our efforts and to align them with the needs of our global member base,” the company would shut down its public API. 
@@ -36,17 +37,18 @@ With Documentaries being my 2nd favourite genre I appreciate Netflix’s ability
 ## Bingeing habits 🍿
 
 **Data prep**
+
 Step 2: Organise the data according to date started and date finished
 
 Here I had to ensure I had clean and well-formatted data in the ‘date_watched’ field of my dataframe. Additionally it was important to have a ‘title’ and an ‘episode_name’ field to differentiate and enable me to count unique show or movie titles and unique episodes which may be part of a series. 
 
 I briefly considered creating an additional field for ‘season’ to enable me to drill on the ways I watched seasons of the same title, however the naming convention around seasons is not always consistent for example:
 
-`title` `series type` `episode name`
+`title`~`series type`~`episode name`
 - Kaleidoscope: Limited Series: Red (The Morning After the Heist)
 - Stateless: Limited Series: The Seventh Circle
 
-`title` `subtitle` `series type` `episode name`
+`title` ~ `subtitle` ~ `series type` ~ `episode name`
 - Big Vape: The Rise and Fall of Juul: Limited Series: Overnight Billionaires
   
   `title` `subtitle` `season number` `episode name`
@@ -75,7 +77,7 @@ I briefly considered creating an additional field for ‘season’ to enable me 
 - Dear White People: Volume 1: Chapter I
 
 `and then there's bojack`
-BoJack Horseman: Season 1: BoJack Horseman: The BoJack Horseman Story, Chapter One
+- BoJack Horseman: Season 1: BoJack Horseman: The BoJack Horseman Story, Chapter One
 
 
 **Findings**
@@ -93,7 +95,7 @@ As a viewer it is both exciting and overwhelming when an entire season of _Top B
 **_The mammoth task of unpacking_**: Now that we’ve all watched 10 hours of content, how do we recall AND unpack how _all_ the events delighted and surprised us? It’s nearly impossible and so the conversation goes something like this: have a 10-minute surface-level chat, where episodes get blurred together, we touch on some general plot points and then briefly discuss the ending. Tragic. This really doen';t do justice to some excellent productions out there. It feels like gone are the beautiful days of _Insecure_ where we all watched together and had all-week to unpack and kiki over the latest 30-minute episode before the next installment. The Condola jokes or iconic ad-libs from Kelly that percolated on social media were for that week were a testament to delightful things that can happen when you give an episode some time to breathe on a weekly release schedule. 
 
 
-​​## ✈️ Places I went with Netflix Airlines
+​​## Places I went with Netflix Airlines 
 
 **Data Prep**
 
