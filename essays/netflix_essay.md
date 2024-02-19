@@ -44,34 +44,37 @@ Here I had to ensure I had clean and well-formatted data in the ‘date_watched�
 
 I briefly considered creating an additional field for ‘season’ to enable me to drill on the ways I watched seasons of the same title, however the naming convention around seasons is not always consistent for example:
 
-`title`~`series type`~`episode name`
-- Kaleidoscope: Limited Series: Red (The Morning After the Heist)
-- Stateless: Limited Series: The Seventh Circle
-
-`title` ~ `subtitle` ~ `series type` ~ `episode name`
-- Big Vape: The Rise and Fall of Juul: Limited Series: Overnight Billionaires
-  
-  `title` `subtitle` `season number` `episode name`
-- Top Boy: Summerhouse: Series 2: Episode 1
-- Astronomy Club: The Sketch Show: Season 1: Lamp Room
-- RuPaul’s Drag Race: All Stars: Season 6: Rumerican Horror Story: Coven Girls
-
-`title` `subtitle` `season number` `part` `episode name`
-- Larry Charles' Dangerous World of Comedy: Season 1: Part 3: Race
-
-`title` `season number` `episode name`
+### the traditional-ish bunch
+`title` ~ `season number` ~ `episode name`
 - BEEF: Season 1: Figures of Light
 - Top Boy: Season 3: If We Are Not Monsters
 - Adventure Time: Season 4: In Your Footsteps / Hug Wolf
 - Master of None: Season 3: Moments in Love, Chapter 2
 - RuPaul's Drag Race: Season 9: She Done Already Done Brought It On
 
-`title` `part` `episode name`
+`title` ~ `subtitle` ~ `season number` ~ `episode name`
+- Top Boy: Summerhouse: Series 2: Episode 1
+- Astronomy Club: The Sketch Show: Season 1: Lamp Room
+- RuPaul’s Drag Race: All Stars: Season 6: Rumerican Horror Story: Coven Girls
+
+`title` ~ `subtitle` ~ `season number` ~ `part` ~ `episode name`
+- Larry Charles' Dangerous World of Comedy: Season 1: Part 3: Race
+  
+### the limited series bunch
+`title` ~ `series type` ~ `episode name`
+- Kaleidoscope: Limited Series: Red (The Morning After the Heist)
+- Stateless: Limited Series: The Seventh Circle
+
+`title` ~ `subtitle` ~ `series type` ~ `episode name`
+- Big Vape: The Rise and Fall of Juul: Limited Series: Overnight Billionaires
+
+### the bunch which refused to use the word 'season'
+`title` ~ `part` ~ `episode name`
 - Babies: Part 2: Movement
 - Avatar: The Last Airbender: Book 1: The Warriors of Kyoshi
 - jeen-yuhs: A Kanye Trilogy: act i: VISION
 
-`title` `volume` `episode name` 
+`title` ~ `volume` ~ `episode name` 
 - Bad Sport: Volume 1: Fallen Idol
 - Patriot Act with Hasan Minhaj: Volume 4: Why Your Public Transportation Sucks
 - Dear White People: Volume 1: Chapter I
@@ -90,12 +93,11 @@ In September my viewing peaked again with 55 titles watched, which coincided wit
 
 As a viewer it is both exciting and overwhelming when an entire season of _Top Boy, Sex Education_ or _The Crown_ is dropped in one go. These shows often have really long production and post-production periods which only add to the anticipation. Although it may feel like winning the lottery when you stumble upon a whole new season of your favourite show I feel there are also some down-sides to Netflix’s binge-release strategy:
 
-**_Walking on egg-shells_**: We can’t talk freely about the dramatic mid-series plot twist or scandalous finale because we don't know where our friends may be within the series and we don’t want to risk giving or receiving a spoiler. As a result, we keep a vow of silence for however many weeks (or days) it takes everyone to watch the show. On the one hand, you may be bursting at the seams to talk to someone but on the other hand, you may have to dodge spoilers from all directions while feeling pressured by some invisible force to binge ASAP to avoid being left behind.
+- _Walking on egg-shells_: We can’t talk freely about the dramatic mid-series plot twist or scandalous finale because we don't know where our friends may be within the series and we don’t want to risk giving or receiving a spoiler. As a result, we keep a vow of silence for however many weeks (or days) it takes everyone to watch the show. On the one hand, you may be bursting at the seams to talk to someone but on the other hand, you may have to dodge spoilers from all directions while feeling pressured by some invisible force to binge ASAP to avoid being left behind.
 
-**_The mammoth task of unpacking_**: Now that we’ve all watched 10 hours of content, how do we recall AND unpack how _all_ the events delighted and surprised us? It’s nearly impossible and so the conversation goes something like this: have a 10-minute surface-level chat, where episodes get blurred together, we touch on some general plot points and then briefly discuss the ending. Tragic. This really doen';t do justice to some excellent productions out there. It feels like gone are the beautiful days of _Insecure_ where we all watched together and had all-week to unpack and kiki over the latest 30-minute episode before the next installment. The Condola jokes or iconic ad-libs from Kelly that percolated on social media were for that week were a testament to delightful things that can happen when you give an episode some time to breathe on a weekly release schedule. 
+- _The mammoth task of unpacking_: Now that we’ve all watched 10 hours of content, how do we recall AND unpack how _all_ the events delighted and surprised us? It’s nearly impossible and so the conversation goes something like this: have a 10-minute surface-level chat, where episodes get blurred together, we touch on some general plot points and then briefly discuss the ending. Tragic. This really doen';t do justice to some excellent productions out there. It feels like gone are the beautiful days of _Insecure_ where we all watched together and had all week to unpack and kiki over the latest 30-minute episode before the next installment. The Condola jokes or iconic ad-libs from Kelly that percolated on social media for that week were a testament to the delightful things that can happen when you give an episode some time to breathe on a weekly release schedule. 
 
-
-​​## Places I went with Netflix Airlines 
+## Places I went with Netflix Airlines ✈️
 
 **Data Prep**
 
@@ -109,7 +111,7 @@ For this visualisation the map, labels, and dots were the easy part. I spent the
 
 I think TV and movies are great ways to explore new perspectives and places and venture out of your comfort zone with relative ease and at a low cost. I’ve truly enjoyed going off the beaten path of Hollywood and being immersed in strange new contexts and storylines. 
 
-It’s awesome to see the incredible amount of non-American content Netflix has available. I have managed to watch several Brazilian, South African and Kenyan titles but most bizarrely 2023 has been the year of Australian content for me. I particularly enjoyed the funny Gen-X show _Why Are You Like This?_ and the dry-humor from _Fisk_ which might make you nostalgic for _The Office_ (IMO George has cemented his place as an iconic receptionist next to Pam.) An honourable mention must also go to the migrant-drama _Stateless_ for excellent acting and gripping story-telling. 
+It’s awesome to see the incredible amount of non-American content Netflix has available. I have managed to watch several Brazilian, South African and Kenyan titles but most bizarrely 2023 has been the year of Australian content for me. I particularly enjoyed the funny Gen-X show _Why Are You Like This?_ and the dry humor from _Fisk_ which might make you nostalgic for _The Office_ (IMO George has cemented his place as an iconic receptionist next to Pam.) An honourable mention must also go to the migrant-drama _Stateless_ for excellent acting and gripping story-telling. 
 
 Looking at the data through a language lens, most of what I watched was unremarkably in English. What I did notice is that it seems any foreign-language content I watch seems to overlap with the languages I am juggling in Duolingo. I’m always so impressed by the movies that come out of Kenya for how gritty and real they are. _Veve_ in particular had a tight and compelling story paired with some excellent acting performances - who knew Savara from _Sauti Sol_ could act like that and seamlessly weave singing into his character, genius.  Although I was almost completely reliant on the subtitles I still enjoyed the French comedy _Nothing to Hide_ (also can someone explain to me if all foreign-language films have an English title? Because that would mean we are most certainly judging a book by its cover, no?)
 
