@@ -9,7 +9,6 @@
     "summary": "I am a forward-thinker excited about using data to build smarter cities and evangelist for data-driven urban development solutions. I have done work in Latin America, Africa, the Middle East and Asia working with public and private sector clients. My super power is always thinking about the end-user of my work and asking how I can better understand and solve the problems they face.",
     "location": { "address": "", "postalCode": "", "city": "Johannesburg", "countryCode": "ZA", "region": "South Africa" },
     "profiles": [
-      { "network": "github", "username": "tracy-git123", "url": "http://github.com/tracy-git123" },
       { "network": "linkedin", "username": "tracymutugi", "url": "https://www.linkedin.com/in/tracymutugi/" }
     ]
   },
@@ -25,7 +24,7 @@
     },
     {
       "name": "Toolsets/OS",
-      "keywords": [ "Windows", "iOS", "Git/GitHub"]
+      "keywords": [ "Windows", "iOS", "GitHub"]
     }
   ],
   "education": [
@@ -38,7 +37,7 @@
     },
     {
       "institution": "University of Cape Town",
-      "area": "Master of Transport Studies",
+      "area": "Master of Transport Planning",
       "startDate": "2019",
       "endDate": "2020"
       
