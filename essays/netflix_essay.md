@@ -4,7 +4,7 @@ type: essay
 title: "Looking into my Netflix data"
 # All dates must be YYYY-MM-DD format!
 date: 2023-12-16
-published: true
+published: false
 labels:
   - Data Analysis
   - Film & TV
