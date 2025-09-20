@@ -1,9 +1,9 @@
 ---
 layout: project
 type: project
-image: img/micromouse/micromouse-square.jpg
-title: "Micromouse"
-date: 2015
+image: img/micromouse/Screenshot 2021-01-24 at 23.37.08.png
+title: "Transit Equity project"
+date: 2025
 published: true
 labels:
   - Map
