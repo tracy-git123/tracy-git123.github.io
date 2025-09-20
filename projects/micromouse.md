@@ -4,36 +4,28 @@ type: project
 image: img/micromouse/micromouse-square.jpg
 title: "Micromouse"
 date: 2015
-published: false
+published: true
 labels:
-  - Robotics
-  - Arduino
-  - C++
-summary: "My team developed a robotic mouse that won first place in the 2015 UH Micromouse competition."
+  - Map
+  - Interactive
+  - Data Visualisation
+  - Tableau
+  - Mapbbox
+summary: "Research project investigated affordable transport access in low-income areas."
 ---
 
 <div class="text-center p-4">
-  <img width="200px" src="../img/micromouse/micromouse-robot.png" class="img-thumbnail" >
-  <img width="200px" src="../img/micromouse/micromouse-robot-2.jpg" class="img-thumbnail" >
-  <img width="200px" src="../img/micromouse/micromouse-circuit.png" class="img-thumbnail" >
+  <img width="200px" src="../img/micromouse/Screenshot 2021-01-24 at 23.37.08.png" class="img-thumbnail" >
 </div>
 
-Micromouse is an event where small robot “mice” solve a 16 x 16 maze.  Events are held worldwide.  The maze is made up of a 16 by 16 gird of cells, each 180 mm square with walls 50 mm high.  The mice are completely autonomous robots that must find their way from a predetermined starting position to the central area of the maze unaided.  The mouse will need to keep track of where it is, discover walls as it explores, map out the maze and detect when it has reached the center.  having reached the center, the mouse will typically perform additional searches of the maze until it has found the most optimal route from the start to the center.  Once the most optimal route has been determined, the mouse will run that route in the shortest possible time.
+You can view the [Tableau dashbord here] ([(https://public.tableau.com/shared/FBPD7C3J3?:display_count=n&:origin=viz_share_link)]).
 
-For this project, I was the lead programmer who was responsible for programming the various capabilities of the mouse.  I started by programming the basics, such as sensor polling and motor actuation using interrupts.  From there, I then programmed the basic PD controls for the motors of the mouse.  The PD control the drive so that the mouse would stay centered while traversing the maze and keep the mouse driving straight.  I also programmed basic algorithms used to solve the maze such as a right wall hugger and a left wall hugger algorithm.  From there I worked on a flood-fill algorithm to help the mouse track where it is in the maze, and to map the route it takes.  We finished with the fastest mouse who finished the maze within our college.
+This research project explores the themes of transport affordability and access to work opportunities for low-income communities in Cape Town, South Africa. Given the high levels of unemployment in these communities, this research explores the impact of travel costs on the ability to access work opportunities. The research explores to what extent low-income communities can access public transport modes which have government subsidised fares.
 
-Here is some code that illustrates how we read values from the line sensors:
+This study surveyed members of Organising for Work, a non-profit organisation which is embedded in low-income communities and provides members with work-readiness support. Reducing the barriers to entering the workforce, such as travel costs, is central to Organising for Work’s mission. The survey collected data from members about trips made for job interviews, training, information gathering and commuting to work.
 
-```cpp
-byte ADCRead(byte ch)
-{
-    word value;
-    ADC1SC1 = ch;
-    while (ADC1SC1_COCO != 1)
-    {   // wait until ADC conversion is completed   
-    }
-    return ADC1RL;  // lower 8-bit value out of 10-bit data from the ADC
-}
-```
+It was found that only 14% of respondents used subsidised modes while 86% used unsubsidised minibus taxis – the most expensive but often most widely available transport mode in terms of network coverage. This highlights the poor coverage of affordable transit in low income areas where it would be most beneficial. In addition, 71% of respondents have had to cancel or postpone a work-related trip, such as a job interview, due to not having enough money.
 
-You can learn more at the [UH Micromouse News Announcement](https://manoa.hawaii.edu/news/article.php?aId=2857).
+
+
+
