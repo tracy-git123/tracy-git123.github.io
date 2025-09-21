@@ -3,7 +3,7 @@ layout: project
 type: project
 image: img/micromouse/Screenshot 2021-01-24 at 23.37.08.png
 title: "Transit Equity project"
-date: 2025
+date: 2022
 published: true
 labels:
   - Map
@@ -14,11 +14,7 @@ labels:
 summary: "Research project investigated affordable transport access in low-income areas."
 ---
 
-<div class="text-center p-4">
-  <img width="200px" src="../img/micromouse/Screenshot 2021-01-24 at 23.37.08.png" class="img-thumbnail" >
-</div>
-
-You can view the [Tableau dashbord here] [(https://public.tableau.com/shared/FBPD7C3J3?:display_count=n&:origin=viz_share_link)].
+You can view the [Tableau dashbord here](https://public.tableau.com/shared/FBPD7C3J3?:display_count=n&:origin=viz_share_link).
 
 This research project explores the themes of transport affordability and access to work opportunities for low-income communities in Cape Town, South Africa. Given the high levels of unemployment in these communities, this research explores the impact of travel costs on the ability to access work opportunities. The research explores to what extent low-income communities can access public transport modes which have government subsidised fares.
 
