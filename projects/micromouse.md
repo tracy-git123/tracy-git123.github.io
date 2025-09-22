@@ -23,7 +23,7 @@ This study surveyed members of Organising for Work, a non-profit organisation wh
 It was found that only 14% of respondents used subsidised modes while 86% used unsubsidised minibus taxis – the most expensive but often most widely available transport mode in terms of network coverage. This highlights the poor coverage of affordable transit in low income areas where it would be most beneficial. In addition, 71% of respondents have had to cancel or postpone a work-related trip, such as a job interview, due to not having enough money.
 
 <div class="text-center p-4">
-  <img width="400px" src="../img/transit_equity/Untitled - New frame.jpg" class="img-thumbnail" >
+  <img width="1000px" src="../img/transit_equity/Untitled - New frame.jpg" class="img-thumbnail" >
 </div>
 
 
