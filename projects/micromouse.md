@@ -26,11 +26,17 @@ It was found that only 14% of respondents used subsidised modes while 86% used u
   <img width="1000px" src="../img/transit_equity/Untitled - New frame.jpg" class="img-thumbnail" >
 </div>
 
-<table style="border-collapse: collapse; text-align: center;">
+<table style="border-collapse: collapse; width: 100%; text-align: center;">
   <tr>
-    <td><img src="../img/transit_equity/UDI_INCOME.jpg" alt="Image 1" width="200"></td>
-    <td><img src="../img/transit_equity/CTIPTN-MyCiti_Network coverage.JPG" alt="Image 2" width="200"></td>
-    <td><img src="../img/transit_equity/CTIPTN-mbt_Network coverage.JPG" alt="Image 3" width="200"></td>
+    <td style="text-align: center;">
+      <img src="../img/transit_equity/CT_income.jpg" alt="Image 1" width="200">
+    </td>
+    <td style="text-align: center;">
+      <img src="../img/transit_equity/CTIPTN-MyCiti_Network coverage.JPG" alt="Image 2" width="200">
+    </td>
+    <td style="text-align: center;">
+      <img src="../img/transit_equity/CTIPTN-mbt_Network coverage.JPG" alt="Image 3" width="200">
+    </td>
   </tr>
   <tr>
     <td>Income distribution of Cape Town</td>
