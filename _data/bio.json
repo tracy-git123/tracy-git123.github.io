@@ -6,17 +6,12 @@
     "email": "tracy.mutugi@gmail.com",
     "phone": "",
     "website": "https://tracy-git123.github.io",
-    "summary": "I am a forward-thinker excited about using data to build smarter cities and evangelist for data-driven urban development solutions. I have done work in Latin America, Africa, the Middle East and Asia working with public and private sector clients. My super power is always thinking about the end-user of my work and asking how I can better understand and solve the problems they face.",
+    "summary": "I am a forward-thinker excited about using data to build smarter cities using data-driven urban transport and housing solutions. I have done work in Latin America, Africa, the Middle East and Asia working with municipal governments and private sector clients including Google Maps and the World Bank",
     "location": { "address": "", "postalCode": "", "city": "Johannesburg", "countryCode": "ZA", "region": "South Africa" },
     "profiles": [
       { "network": "linkedin", "username": "tracymutugi", "url": "https://www.linkedin.com/in/tracymutugi/" }
     ]
   },
-  "interests": [
-    { "name": "Maps" },
-    { "name": "Transport" },
-    { "name": "Housing" }
-  ],
   "skills": [
     {
       "name": "Languages and Frameworks",
