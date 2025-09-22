@@ -15,9 +15,9 @@ labels:
 summary: "This was a predictive modelling project where a model was trained to predict the arrival time of a delivery."
 ---
 
-This project made use of data from over 28 000 deliveries completed by Sendy in Nairobi, Kenya.
-The dataset used to train the predictive model used 21 201 data points while the model was test on 7 068 data points.
-The aim was was to optimise the model to improve the Mean Sqaured Error score.
+This project used data from over 28 000 deliveries completed by Sendy in Nairobi, Kenya.
+The dataset used to train the predictive model used 21 201 data points while the model was tested on 7 068 data points.
+The aim was to optimise the model to improve the Mean Squared Error score. Travel time was measured in seconds.
 
 
 Here is a summary of columns that are found in the dataset which represent the delivery attributes that can be used to predict delivery time:
@@ -54,8 +54,8 @@ Data columns (total 25 columns):
 dtypes: float64(6), int64(10), object(9)
 ```
 
-1) The attributes I chose to include in the model were: 
-- Day of the week - since traffic conditions on the weekend or weekday influnce delivery times
+1) I chose the 3 attributes below to include in the model as they had a more significant impact on the delivery time: 
+- Day of the week - since traffic conditions on the weekend or weekday influence delivery times
 - Precipitation - since rain will impact traffic congestion on the road system
 - Distance - between the Sendy depot and the delivery destination
 
@@ -79,48 +79,25 @@ train1['Pickup_-_Weekday_(Mo_=_1)'] = train1['Pickup_-_Weekday_(Mo_=_1)'].replac
 #no rain day get dummy 0
 train1['Precipitation_in_millimeters'] = train1['Precipitation_in_millimeters'].fillna(int(0))
 
-#rain days get dummy 1
-train1.loc[train1['Precipitation_in_millimeters'] >0] = int(1)
+#rain days get dummy 1 else 0
+train1['Precipitation_in_millimeters'] = np.where(train1['Precipitation_in_millimeters'] > 0, 1, 0)
+
 ```
 
-I then created a column to store the predicted delivery times in the test-dataframe:
-
-```cpp
-test1['Time_from_Pickup_to_Arrival'] = np.nan
-test1['Time_from_Pickup_to_Arrival'].unique()
-test1.info()
-
-<class 'pandas.core.frame.DataFrame'>
-RangeIndex: 7068 entries, 0 to 7067
-Data columns (total 4 columns):
- #   Column                        Non-Null Count  Dtype  
----  ------                        --------------  -----  
- 0   Pickup_-_Weekday_(Mo_=_1)     7068 non-null   int64  
- 1   Precipitation_in_millimeters  7068 non-null   float64
- 2   Distance_(KM)                 7068 non-null   int64  
- 3   Time_from_Pickup_to_Arrival   0 non-null      float64
-dtypes: float64(2), int64(2)
-memory usage: 221.0 KB
-```
-
-2) Model training using the the training dataset:
+2) Model training using the training dataset:
 
 ```cpp
 x = train1.drop('Time_from_Pickup_to_Arrival', axis=1)
 y = train1['Time_from_Pickup_to_Arrival']
 >>> n_samples, n_features = 10, 5
->>> rng = np.random.RandomState(0)
->>> y = train1['Time_from_Pickup_to_Arrival']
->>> X = train1.drop('Time_from_Pickup_to_Arrival', axis=1)
 
 reg = make_pipeline(StandardScaler(), SGDRegressor(max_iter=1000, tol=1e-3))
-
 reg.fit(X, y)
 
 y_preds = reg.predict(X)
 ```
 
-3) Next I calculated the root mean squared error between the between the predicted delivery time and the actual delivery times:
+3) Next, I calculated the root mean squared error between the predicted delivery time and the actual delivery times:
 
 ```cpp
 def rmse(y_test, y_predict):
@@ -131,7 +108,7 @@ def rmse(y_test, y_predict):
       794.4000853649443
 ```
 
-4) Finally I applied the model to predict delivery times on the test dataset:
+4) Finally, I applied the model to predict delivery times on the test dataset:
 
 ```cpp
 xt = test1.drop('Time_from_Pickup_to_Arrival', axis=1)
@@ -148,4 +125,4 @@ daf.head()
 4 	1222.606838
 ```
 
-Further tuning to the model and regression can be applied to lower the RMSE.
+RMSE ≈ 794 seconds (~13 minutes) suggests substantial error. To lower the RMSE, further tuning of the model can be applied such as including more attributes. Alternatively, a simpler linear regression model may be used if only 3 attributes will be used.
