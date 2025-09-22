@@ -14,7 +14,7 @@ labels:
 summary: "Research project investigated affordable transport access in low-income areas."
 ---
 
-You can view the [Tableau dashbord here](https://public.tableau.com/shared/FBPD7C3J3?:display_count=n&:origin=viz_share_link).
+View the [Tableau dashbord here](https://public.tableau.com/shared/FBPD7C3J3?:display_count=n&:origin=viz_share_link).
 
 This research project explores the themes of transport affordability and access to work opportunities for low-income communities in Cape Town, South Africa. Given the high levels of unemployment in these communities, this research explores the impact of travel costs on the ability to access work opportunities. The research explores to what extent low-income communities can access public transport modes which have government subsidised fares.
 
