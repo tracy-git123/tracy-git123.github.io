@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/micromouse/Screenshot 2021-01-24 at 23.37.08.png
+image: img/micromouse/Screenshot 2025-09-22 at 10.33.17.png
 title: "Transit Equity"
 date: 2024
 published: true
