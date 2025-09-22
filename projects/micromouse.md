@@ -39,9 +39,12 @@ It was found that only 14% of respondents used subsidised modes while 86% used u
     </td>
   </tr>
   <tr>
-    <td>Income distribution of Cape Town</td>
-    <td>Subsidised bus rapid transit service coverage in Cape Town</td>
-    <td>Unsubsidised minibus taxi service coverage in Cape Town</td>
+    <td style="font-size: 0.9em; word-wrap: break-word; padding: 5px;">
+      Income distribution of Cape Town</td>
+    <td style="font-size: 0.9em; word-wrap: break-word; padding: 5px;">
+    Subsidised bus rapid transit service coverage in Cape Town</td>
+    <td style="font-size: 0.9em; word-wrap: break-word; padding: 5px;">
+    Unsubsidised minibus taxi service coverage in Cape Town</td>
   </tr>
 </table>
 
