@@ -3,7 +3,7 @@ layout: project
 type: project
 image: img/micromouse/Screenshot 2021-01-24 at 23.37.08.png
 title: "Transit Equity project"
-date: 2022
+date: 2024
 published: true
 labels:
   - Map
