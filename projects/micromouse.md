@@ -29,7 +29,7 @@ It was found that only 14% of respondents used subsidised modes while 86% used u
 <table style="border-collapse: collapse; width: 100%; text-align: center;">
   <tr>
     <td style="text-align: center;">
-      <img src="../img/transit_equity/CT_income.jpg" alt="Image 1" width="200">
+      <img src="../img/transit_equity/CT_income.png" alt="Image 1" width="200">
     </td>
     <td style="text-align: center;">
       <img src="../img/transit_equity/CTIPTN-MyCiti_Network coverage.JPG" alt="Image 2" width="200">
