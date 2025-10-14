@@ -2,7 +2,7 @@
 layout: project
 type: project
 image: img/new-ways-to-bus.jpg
-title: "NWTB"
+title: "New Ways to Bus"
 date: 2025
 #draft: true
 published: true
@@ -19,7 +19,7 @@ summary: "Mapping bus route changes after the OCTranspo New Ways To Bus launch"
 
 ### Route Change Map
 
-This interactive map shows route changes on bus lines 18, 20 and 24, implemented as part of the New Ways To Bus initiative.
+This interactive map shows route changes on bus lines 18, 20 and 24, implemented as part of the New Ways To Bus initiative in Ottawa.
 
 <div style="display: flex; gap: 10px;">
 
@@ -29,7 +29,7 @@ This interactive map shows route changes on bus lines 18, 20 and 24, implemented
   </div>
 
   <div style="flex: 1; text-align: center;">
-    <iframe src="/projects/folder/pre_light.html" width="100%" height="600px"></iframe>
+    <iframe src="/projects/folder/post_light.html" width="100%" height="600px"></iframe>
     <div>New route map</div> 
   </div>
 </div>
