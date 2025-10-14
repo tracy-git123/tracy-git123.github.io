@@ -47,3 +47,11 @@ This interactive map shows route changes on bus lines 18, 20 and 24, implemented
 | **<span style="color:green">St-Laurent-Billings Bridge</span>** | **<span style="color:blue">St-Laurent-Rideau</span>** | **<span style="color:black">St-Laurent-Chapel Hill</span>** |
 | Route no longer serves Parliament Station and extended to Billings Bridge Station. | Route extended to run between Rideau Center and St-Laurent stations. | Route changed to run between St-Laurent Station and Chapel Hill Park & Ride. |
 
+
+|  | **<span style="color:green">Route 18</span>** | **<span style="color:blue">Route 20</span>** | **<span style="color:black">Route 24</span>** |
+|--|---------------------------------------------|---------------------------------------------|---------------------------------------------|
+| **Old Name** | St-Laurent-Parliament | St-Laurent-Vanier | St-Laurent-Beacon Hill |
+| **New Name** | St-Laurent-Billings Bridge | St-Laurent-Rideau | St-Laurent-Chapel Hill |
+| **Change Description** | Route no longer serves Parliament Station and extended to Billings Bridge Station. | Route extended to run between Rideau Center and St-Laurent stations. | Route changed to run between St-Laurent Station and Chapel Hill Park & Ride. |
+
+
