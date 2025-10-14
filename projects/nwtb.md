@@ -4,8 +4,8 @@ type: project
 image: img/TV shows and movies.png
 title: "Netflix Wrapped"
 date: 2023
-#draft: true
-published: true
+draft: true
+published: false
 labels:
   - Map
   - Python
