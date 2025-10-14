@@ -1,7 +1,7 @@
 ---
 layout: project
 type: project
-image: img/TV shows and movies.png
+image: img/new-ways-to-bus.jpg
 title: "NWTB"
 date: 2025
 #draft: true
