@@ -20,4 +20,4 @@ summary: "Mapping bus route changes after the OCTranspo New Ways To Bus launch"
 
 This interactive map shows GTFS route lines with a 500 m buffer.
 
-<iframe src="/projects/buffered_routes.html" width="100%" height="600px"></iframe>
+<iframe src="/buffered_routes.html" width="100%" height="600px"></iframe>
