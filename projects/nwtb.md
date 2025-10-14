@@ -3,7 +3,7 @@ layout: project
 type: project
 image: img/TV shows and movies.png
 title: "NWTB"
-date: 2023
+date: 2025
 #draft: true
 published: true
 labels:
@@ -21,8 +21,10 @@ summary: "Mapping bus route changes after the OCTranspo New Ways To Bus launch"
 This interactive map shows GTFS route lines with a 500 m buffer.
 
 <div class="ratio ratio-4x3 my-4">
-  <iframe src="../projects/buffered_routes.html" 
+  <iframe src="../projects/folder/index.html" 
           title="Overview of Hackystat" 
           allowfullscreen>
   </iframe>
 </div>
+
+<iframe src="/projects/folder/index.html" width="100%" height="600px"></iframe>
