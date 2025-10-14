@@ -13,15 +13,37 @@ labels:
   - geodataframe
   - Folium
   - Transit
+  - GTFS
 summary: "Mapping bus route changes after the OCTranspo New Ways To Bus launch"
 ---
 
 ### Route Change Map
 
-This interactive map shows GTFS route lines with a 500 m buffer.
+This interactive map shows route changes on bus lines 18, 20 and 24, implemented as part of the New Ways To Bus initiative.
 
 <div style="display: flex; gap: 10px;">
-  <iframe src="/projects/folder/pre_light.html" width="50%" height="600px"></iframe>
-  <iframe src="/projects/folder/post_light.html" width="50%" height="600px"></iframe>
+
+  <div style="flex: 1; text-align: center;">
+    <iframe src="/projects/folder/pre_light.html" width="50%" height="600px"></iframe>
+    <div>Old route map</div> 
+  </div>
+
+  <div style="flex: 1; text-align: center;">
+    <iframe src="/projects/folder/pre_light.html" width="50%" height="600px"></iframe>
+    <div>New route map</div> 
+  </div>
 </div>
+
+
+| **Route** | **New Name** | **Change Description** |
+|-----------|--------------|----------------------|
+| **<span style="color:green">Route 18</span>** | St-Laurent-Billings Bridge | Route no longer serves Parliament Station and extended to Billings Bridge Station. |
+| **<span style="color:blue">Route 20</span>** | St-Laurent-Rideau | Route extended to run between Rideau Center and St-Laurent stations. |
+| **<span style="color:black">Route 24</span>** | St-Laurent-Chapel Hill | Route changed to run between St-Laurent Station and Chapel Hill Park & Ride. |
+
+
+| **Route 18** | **Route 20** | **Route 24** |
+|--------------|--------------|--------------|
+| **<span style="color:green">St-Laurent-Billings Bridge</span>** | **<span style="color:blue">St-Laurent-Rideau</span>** | **<span style="color:black">St-Laurent-Chapel Hill</span>** |
+| Route no longer serves Parliament Station and extended to Billings Bridge Station. | Route extended to run between Rideau Center and St-Laurent stations. | Route changed to run between St-Laurent Station and Chapel Hill Park & Ride. |
 
