@@ -22,6 +22,7 @@ These interactive maps show bus route changes implemented as part of the New Way
 ### 🏥 Route changes and hospital access 
 
 **CHEO - Children’s Hospital of Eastern Ontario**
+<br><br>
 Change Description: Route 55 has been eliminated. Route 45 retained and new Route 5 introduced
 
 <div style="display: flex; gap: 10px;">
@@ -35,9 +36,11 @@ Change Description: Route 55 has been eliminated. Route 45 retained and new Rout
     <div>New route map</div> 
   </div>
 </div>
-
+<br><br>
+<br><br>
 
 **Queensway Carleton Hospital**
+<br><br>
 Change Description: Route 58 has been changed and no longer passes by the hospital. Route 57 extended further northeast. Route 68 and 88 enhance access for users in the east and west. 
 
 <div style="display: flex; gap: 10px;">
@@ -51,7 +54,8 @@ Change Description: Route 58 has been changed and no longer passes by the hospit
     <div>New route map</div> 
   </div>
 </div>
-
+<br><br>
+<br><br>
 
 ### 🚌 Route changes around St Laurent hub 
 <div style="display: flex; gap: 10px;">
@@ -66,7 +70,7 @@ Change Description: Route 58 has been changed and no longer passes by the hospit
     <div>New route map</div> 
   </div>
 </div>
-
+<br><br>
 
 |  | **<span style="color:green">Route 18</span>** | **<span style="color:blue">Route 20</span>** | **<span style="color:black">Route 24</span>** |
 |--|---------------------------------------------|---------------------------------------------|---------------------------------------------|
