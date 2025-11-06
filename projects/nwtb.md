@@ -19,7 +19,10 @@ summary: "Mapping bus route changes after the OCTranspo New Ways To Bus launch"
 
 These interactive maps show bus route changes implemented as part of the New Ways To Bus initiative in Ottawa in April 2025.
 
-### Route changes and hospital access 
+### 🏥 Route changes and hospital access 
+
+**CHEO - Children’s Hospital of Eastern Ontario**
+Change Description: Route 55 has been eliminated. Route 45 retained and new Route 5 introduced
 
 <div style="display: flex; gap: 10px;">
   <div style="flex: 1; text-align: center;">
@@ -33,8 +36,9 @@ These interactive maps show bus route changes implemented as part of the New Way
   </div>
 </div>
 
-**CHEO - Children’s Hospital of Eastern Ontario**
-| **Change Description** | Route 55 has been eliminated. Route 45 retained and new Route 5 introduced
+
+**Queensway Carleton Hospital**
+Change Description: Route 58 has been changed and no longer passes by the hospital. Route 57 extended further northeast. Route 68 and 88 enhance access for users in the east and west. 
 
 <div style="display: flex; gap: 10px;">
   <div style="flex: 1; text-align: center;">
@@ -48,10 +52,8 @@ These interactive maps show bus route changes implemented as part of the New Way
   </div>
 </div>
 
-**Queensway Carleton Hospital**
-| **Change Description** | Route 58 has been changed and no longer passes by the hospital. Route 57 extended further northeast. Route 68 and 88 enhance access for users in the east and west. 
 
-### Route changes around St Laurent hub
+### 🚌 Route changes around St Laurent hub 
 <div style="display: flex; gap: 10px;">
 
   <div style="flex: 1; text-align: center;">
