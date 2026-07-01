@@ -17,10 +17,10 @@ labels:
 summary: "Mapping bus route changes after the OCTranspo New Ways To Bus launch"
 ---
 
-On April 27, 2025, OC Transpo launched New Ways to Bus (NWTB), the largest bus network overhaul in Ottawa’s history. The redesign included changes to route paths, eliminated routes and the introduction of new routes across the city. Between May and July 2025, the [City for All Women Initiative (CAWI) surveyed residents] (https://www.cawi-ivtf.org/transit-therapy-line-preliminary-results-ottawa-2026-budget/) to understand how these changes have affected daily travel. One of the findings that emerged was this: getting to healthcare destinations such as CHEO and Queensway Carleton Hospital has become harder and more time-consuming. 
+On April 27, 2025, OC Transpo launched New Ways to Bus (NWTB), the largest bus network overhaul in Ottawa’s history. The redesign included changes to route paths, eliminated routes and the introduction of new routes across the city. Between May and July 2025, the [City for All Women Initiative (CAWI) surveyed residents](https://www.cawi-ivtf.org/transit-therapy-line-preliminary-results-ottawa-2026-budget/) to understand how these changes have affected daily travel. One of the findings that emerged was this: getting to healthcare destinations such as CHEO and Queensway Carleton Hospital has become harder and more time-consuming. 
 The survey respondents raised that they now have to make more transfers and any missed connection means their travel time will increase. Some respondents reported spending over three hours on a one-way trip within Ottawa. As one respondent put it: 
 
-> “_I’m needing to take a full day off work just to get to one medical appointment._”
+>“_I’m needing to take a full day off work just to get to one medical appointment._”
 
 ### 🏥 Hospital access 
 
