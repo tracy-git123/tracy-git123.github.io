@@ -52,7 +52,7 @@ Since the launch of NWTB:
 Routes 5 and 45 now cover far less area than the previous Route 45 and 55 combination. Route 55 previously ran between Westgate Mall and Elmvale Mall and stopped directly at CHEO, making the children’s hospital accessible from both the east and the west without transfers. 
 With Route 55 gone, residents travelling from the west now face a more complicated journey. They must travel downtown first and then transfer, either to Route 45 or Route 5, to reach CHEO. The impact goes beyond CHEO. Route 55 also served The Ottawa Hospital Civic Campus and The Royal Ottawa Mental Health Centre. Route 55's elimination has significantly disrupted access to multiple healthcare facilities, particularly for west-end residents. 
 
-> For residents, caregivers and healthcare workers, these added steps are not minor inconveniences. Even small changes to service increase > trip-planning stress and can also lead to missed shifts, late arrivals, or cancelled appointments.
+>For residents, caregivers and healthcare workers, these added steps are not minor inconveniences. Even small changes to service increase > >trip-planning stress and can also lead to missed shifts, late arrivals, or cancelled appointments.
 
 
 **Queensway Carleton Hospital**
