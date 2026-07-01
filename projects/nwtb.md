@@ -17,15 +17,14 @@ labels:
 summary: "Mapping bus route changes after the OCTranspo New Ways To Bus launch"
 ---
 
-On April 27, 2025, OC Transpo launched New Ways to Bus (NWTB), the largest bus network overhaul in Ottawa’s history. The redesign included changes to route paths, eliminated routes and the introduction of new routes across the city. Between May and July 2025, the [City for All Women Initiative (CAWI) surveyed residents](https://www.cawi-ivtf.org/transit-therapy-line-preliminary-results-ottawa-2026-budget/) to understand how these changes have affected daily travel. One of the findings that emerged was this: getting to healthcare destinations such as CHEO and Queensway Carleton Hospital has become harder and more time-consuming. 
-The survey respondents raised that they now have to make more transfers and any missed connection means their travel time will increase. Some respondents reported spending over three hours on a one-way trip within Ottawa. As one respondent put it: 
+On April 27, 2025, OC Transpo launched New Ways to Bus (NWTB), the largest bus network overhaul in Ottawa’s history. The redesign included changes to route paths, eliminated routes and the introduction of new routes across the city. Between May and July 2025, the [City for All Women Initiative (CAWI) surveyed residents](https://www.cawi-ivtf.org/transit-therapy-line-preliminary-results-ottawa-2026-budget/) to understand how these changes have affected daily travel. One of the findings that emerged was this: **getting to healthcare destinations such as CHEO and Queensway Carleton Hospital has become harder and more time-consuming.**
+Some respondents reported spending **over three hours** on a one-way trip within Ottawa. As one respondent put it: 
 
 >“_I’m needing to take a full day off work just to get to one medical appointment._”
 
 ### 🏥 Hospital access 
-
-**CHEO - Children’s Hospital of Eastern Ontario**
 <br><br>
+**CHEO - Children’s Hospital of Eastern Ontario**
 🔁 Key changes: Route 55 has been eliminated. Route 45 retained and new Route 5 introduced
 
 <div style="display: flex; gap: 10px;">
@@ -39,7 +38,6 @@ The survey respondents raised that they now have to make more transfers and any 
     <div>New route map</div> 
   </div>
 </div>
-<br><br>
 <br><br>
 
 Before New Ways to Bus (NWTB), bus users could reach CHEO using Route 45 and Route 55, as shown above. Together, these routes provided coverage across the central part of Ottawa. 
@@ -83,12 +81,12 @@ Taken together, these changes suggest that overall access to the Queensway Carle
 
 Through this collaboration with CAWI, I learnt that a Caring City sees, values and supports both carers and those they care for, with spaces & systems designed for their needs. 
 
->Transit plays a critical role in care work. Care rarely happens in one place. It requires moving between homes, workplaces, schools, hospitals, pharmacies, daycares and social service centers. When transit is slow, unreliable, or poorly connected, care becomes more challenging, time-consuming, and expensive.
+>>Transit plays a critical role in care work. Care rarely happens in one place. It requires moving between homes, workplaces, schools, hospitals, pharmacies, daycares and social service centers. When transit is slow, unreliable, or poorly connected, care becomes more challenging, time-consuming, and expensive.
 
 Many care workers rely on public transit to reach their jobs and the people who depend on them, such as nannies, nurses, early childhood educators, personal support workers and assisted living aides. When public transit fails to support care work, the ripple effect can be seen in health outcomes, workforce participation, and community wellbeing. Designing transit with care in mind is not a niche issue. It is fundamental to building a city that works for everyone.
 
 
-### 🚌 Route changes around St Laurent hub 
+### 🚌 Route changes at St Laurent hub 
 <div style="display: flex; gap: 10px;">
 
   <div style="flex: 1; text-align: center;">
