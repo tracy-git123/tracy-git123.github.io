@@ -30,8 +30,8 @@ This KPI simply asks: did the planned bus trips actually run and get delivered? 
 This measures whether buses arrive at regular intervals of every 15 minutes or less. The goal is 85% but OC Transpo reports that 81% of trips occur every 15 minutes or less.
 For riders, irregular service usually shows up in two familiar ways: 
 <ol>
-<li>1. a crowded stop where so many people are waiting that a bottleneck occurs with people struggling to get on and off the bus, and</li> 
-<li>2. bus-bunching, where nothing comes for 20 minutes and then two buses show up at once, like two elevators opening after you’ve already been waiting forever. Only one really helps you.</li>
+<li> a crowded stop where so many people are waiting that a bottleneck occurs with people struggling to get on and off the bus, and</li> 
+<li> bus-bunching, where nothing comes for 20 minutes and then two buses show up at once, like two elevators opening after you’ve already been waiting forever. Only one really helps you.</li>
 </ol>
 
 ### On-Time Para Transpo 
@@ -40,7 +40,7 @@ This measures the percentage of Para Transpo customers picked up within a 30-min
 ## Why the Numbers Don’t Match Riders’ Daily Reality 
 Even though the reported figures appear high, the day-to-day feedback from riders tells a different story: long waits, missed connections, inconsistent service, and complaints from Para Transpo users about being picked up far outside their scheduled times. 
 
->A system reporting 98% delivery and 72% punctuality may seem functional on paper, but for someone like Maria, the gaps are real. Every late bus accumulates into real consequences like missed pay, childcare challenges, disciplinary pressure at work, or the extra financial burden of paying for alternative transportation.
+> A system reporting 98% delivery and 72% punctuality may seem functional on paper, but for someone like Maria, the gaps are real. Every late bus accumulates into real consequences like missed pay, childcare challenges, disciplinary pressure at work, or the extra financial burden of paying for alternative transportation.
 
 ### What Residents Can Do to Hold the System Accountable 
 Understanding these KPIs gives residents more leverage. When speaking to councillors or participating in consultations, people can ask: 
@@ -51,5 +51,5 @@ Understanding these KPIs gives residents more leverage. When speaking to council
   
 Asking specific, measurable questions forces clearer answers and keeps decision-makers focused on riders’ real needs—not just system-wide averages. Residents deserve a system that works. Reliable public transit is not a luxury. It’s the backbone of a functioning city, especially for those who depend on it to get to work, school, healthcare, and community services. Riders like Maria shouldn’t have to gamble every morning on whether their bus will come on time. 
 
-For change to happen, residents need a transit system that measures what truly matters: reliability, equity, affordability and convenience. Understanding the gaps in OC Transpo’s reporting is a first step toward pushing for the system Ottawa residents deserve.
+For change to happen, residents need a transit system that **measures what truly matters**: reliability, equity, affordability and convenience. Understanding the gaps in OC Transpo’s reporting is a first step toward pushing for the system Ottawa residents deserve.
 
