@@ -2,7 +2,7 @@
 layout: project
 type: project
 image: img/sendy-delivery-1024x669.png
-title: "Predicting Delivery Arrival Time - Sendy"
+title: "Predicting Travel Time"
 date: 2020
 published: true
 labels:
@@ -40,10 +40,11 @@ An initial exploratory assessment was undertaken to identify variables most like
 I chose three predictor variables based on their statistically significant impact on the delivery time:
 
 | Feature           | Rationale                                                                            |
-| ----------------- | ------------------------------------------------------------------------------------ |
+| :---              |                                                                                 ---: |
 | **Distance (km)** | Longer travel distances generally increase delivery time.                            |
 | **Day of Week**   | Weekday and weekend traffic patterns differ significantly, influencing travel times. |
 | **Precipitation** | Rainfall contributes to congestion and slower travel speeds.                         |
+
 
 Several preprocessing and feature engineering steps were performed:
 
@@ -52,7 +53,7 @@ Several preprocessing and feature engineering steps were performed:
 - Transformed precipitation into a binary rain/no-rain feature.
 - Standardised predictor variables before model training to ensure all features were on a comparable scale, improving the stability and efficiency of the model.
 
-These transformations simplified the feature space while retaining variables with meaningful predictive value.
+These transformations simplified the feature space while retaining variables with meaningful predictive value (code snippet below).
 
 ```cpp
 #weekdays get a dummy value of 0
@@ -88,7 +89,11 @@ _Model Performance_
 - Test observations: 7,068
 - RMSE: ≈ 794 seconds (13.2 minutes)
 
-The model successfully generated delivery time predictions for unseen deliveries, demonstrating the complete supervised learning workflow from training through inference.
+The model successfully generated delivery time predictions for unseen deliveries, demonstrating the complete supervised learning workflow. 
+
+### Reflection
+
+On average, the model's predicted delivery times differ from the actual delivery times by about 13 minutes. The relatively high RMSE suggests that delivery duration is influenced by additional variables beyond the three predictors used. Potential improvements include incorporating geographic features, vehicle characteristics, time-of-day effects, rider behaviour, and traffic-related variables. Future iterations could also compare alternative regression algorithms such as Linear Regression, Random Forest, Gradient Boosting, or XGBoost, together with hyperparameter tuning and cross-validation to improve predictive accuracy.
 
 ### Key Statistical and Machine Learning Skills Demonstrated
 - Exploratory data analysis (EDA)
@@ -101,7 +106,3 @@ The model successfully generated delivery time predictions for unseen deliveries
 - Model training using stochastic gradient descent
 - Predictive model evaluation using RMSE
 - Python, Pandas, NumPy and Scikit-learn
-
-### Reflection
-
-The relatively high RMSE suggests that delivery duration is influenced by additional variables beyond the three predictors used. Potential improvements include incorporating geographic features, vehicle characteristics, time-of-day effects, rider behaviour, and traffic-related variables. Future iterations could also compare alternative regression algorithms such as Linear Regression, Random Forest, Gradient Boosting, or XGBoost, together with hyperparameter tuning and cross-validation to improve predictive accuracy.
