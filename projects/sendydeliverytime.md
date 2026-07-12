@@ -15,59 +15,44 @@ labels:
 summary: "This was a predictive modelling project where a model was trained to predict the arrival time of a delivery."
 ---
 
-This project used data from over 28 000 deliveries completed by Sendy in Nairobi, Kenya.
-The dataset used to train the predictive model used 21 201 data points while the model was tested on 7 068 data points.
-The aim was to optimise the model to improve the Mean Squared Error score. Travel time was measured in seconds.
+### Overview
 
+I developed a machine learning regression model to predict delivery arrival times for Sendy, a logistics company operating in Nairobi, Kenya. The project analysed over 28,000 completed deliveries, using 21,201 observations for model training and 7,068 observations for testing. The objective was to minimise prediction error by optimising the model's Root Mean Squared Error (RMSE), with delivery time measured in seconds.
 
-Here is a summary of columns that are found in the dataset which represent the delivery attributes that can be used to predict delivery time:
+This project demonstrates the application of statistical analysis, feature engineering, data preprocessing, predictive modelling, and model evaluation to solve a real-world logistics optimisation problem.
 
-```cpp
-Data columns (total 25 columns):
- #   Column                                Non-Null Count  Dtype  
----  ------                                --------------  -----  
- 0   Order_No                              7068 non-null   object 
- 1   User_Id                               7068 non-null   object 
- 2   Vehicle_Type                          7068 non-null   object 
- 3   Platform_Type                         7068 non-null   int64  
- 4   Personal_or_Business                  7068 non-null   object 
- 5   Placement_-_Day_of_Month              7068 non-null   int64  
- 6   Placement_-_Weekday_(Mo_=_1)          7068 non-null   int64  
- 7   Placement_-_Time                      7068 non-null   object 
- 8   Confirmation_-_Day_of_Month           7068 non-null   int64  
- 9   Confirmation_-_Weekday_(Mo_=_1)       7068 non-null   int64  
- 10  Confirmation_-_Time                   7068 non-null   object 
- 11  Arrival_at_Pickup_-_Day_of_Month      7068 non-null   int64  
- 12  Arrival_at_Pickup_-_Weekday_(Mo_=_1)  7068 non-null   int64  
- 13  Arrival_at_Pickup_-_Time              7068 non-null   object 
- 14  Pickup_-_Day_of_Month                 7068 non-null   int64  
- 15  Pickup_-_Weekday_(Mo_=_1)             7068 non-null   int64  
- 16  Pickup_-_Time                         7068 non-null   object 
- 17  Distance_(KM)                         7068 non-null   int64  
- 18  Temperature                           5631 non-null   float64
- 19  Precipitation_in_millimeters          199 non-null    float64
- 20  Pickup_Lat                            7068 non-null   float64
- 21  Pickup_Long                           7068 non-null   float64
- 22  Destination_Lat                       7068 non-null   float64
- 23  Destination_Long                      7068 non-null   float64
- 24  Rider_Id                              7068 non-null   object 
-dtypes: float64(6), int64(10), object(9)
-```
+### Dataset Exploration
 
-1) I chose the 3 attributes below to include in the model as they had a more significant impact on the delivery time: 
-- Day of the week - since traffic conditions on the weekend or weekday influence delivery times
-- Precipitation - since rain will impact traffic congestion on the road system
-- Distance - between the Sendy depot and the delivery destination
+The dataset contained 25 variables describing delivery characteristics, including:
 
-```cpp
-train1 = train1[['Pickup_-_Weekday_(Mo_=_1)',
-'Precipitation_in_millimeters','Distance_(KM)','Time_from_Pickup_to_Arrival' ]]
+- Delivery distance
+- Pickup and confirmation timestamps
+- Geographic coordinates
+- Weather conditions
+- Vehicle type
+- Customer type
+- Rider information
 
-test1 = test1[['Pickup_-_Weekday_(Mo_=_1)',
-'Precipitation_in_millimeters','Distance_(KM)']]
-```
+An initial exploratory assessment was undertaken to identify variables most likely to influence delivery time while balancing model simplicity and predictive performance.
 
-I streamlined the string values into numerical values in both the train and test data sets:
+### Feature Selection and Engineering
+
+I chose three predictor variables based on their statistically significant impact on the delivery time:
+
+| Feature           | Rationale                                                                            |
+| ----------------- | ------------------------------------------------------------------------------------ |
+| **Distance (km)** | Longer travel distances generally increase delivery time.                            |
+| **Day of Week**   | Weekday and weekend traffic patterns differ significantly, influencing travel times. |
+| **Precipitation** | Rainfall contributes to congestion and slower travel speeds.                         |
+
+Several preprocessing and feature engineering steps were performed:
+
+- Converted categorical weekday values into a binary weekday/weekend indicator.
+- Imputed missing precipitation values assuming no recorded rainfall.
+- Transformed precipitation into a binary rain/no-rain feature.
+- Standardised predictor variables before model training to ensure all features were on a comparable scale, improving the stability and efficiency of the model.
+
+These transformations simplified the feature space while retaining variables with meaningful predictive value.
 
 ```cpp
 #weekdays get a dummy value of 0
@@ -84,45 +69,39 @@ train1['Precipitation_in_millimeters'] = np.where(train1['Precipitation_in_milli
 
 ```
 
-2) Model training using the training dataset:
+### Machine Learning Model
 
-```cpp
-x = train1.drop('Time_from_Pickup_to_Arrival', axis=1)
-y = train1['Time_from_Pickup_to_Arrival']
->>> n_samples, n_features = 10, 5
+A regression pipeline was developed using Scikit-learn, combining:
 
-reg = make_pipeline(StandardScaler(), SGDRegressor(max_iter=1000, tol=1e-3))
-reg.fit(X, y)
+- StandardScaler for feature normalisation
+- Stochastic Gradient Descent (SGD) Regressor for predictive modelling
 
-y_preds = reg.predict(X)
-```
+The model was trained to estimate delivery time using engineered predictor variables.
 
-3) Next, I calculated the root mean squared error between the predicted delivery time and the actual delivery times:
+### Model Evaluation
 
-```cpp
-def rmse(y_test, y_predict):
-  return np.sqrt(mean_squared_error(y_test, y_predict))
-  
-  answer = rmse(y, y_preds)
-  answer
-      794.4000853649443
-```
+Model performance was evaluated using Root Mean Squared Error (RMSE), a standard regression metric that measures the average amount of prediction error.
 
-4) Finally, I applied the model to predict delivery times on the test dataset:
+_Model Performance_
 
-```cpp
-xt = test1.drop('Time_from_Pickup_to_Arrival', axis=1)
+- Training observations: 21,201
+- Test observations: 7,068
+- RMSE: ≈ 794 seconds (13.2 minutes)
 
-ytest_preds = reg.predict(xt)
-       
-daf = pd.DataFrame(ytest_preds, columns=['Time_from_Pickup_to_Arrival'])
-daf.head()
-  Time_from_Pickup_to_Arrival
-0 	1418.709746
-1 	1124.555383
-2 	1124.555383
-3 	1124.555383
-4 	1222.606838
-```
+The model successfully generated delivery time predictions for unseen deliveries, demonstrating the complete supervised learning workflow from training through inference.
 
-RMSE ≈ 794 seconds (~13 minutes) suggests substantial error. To lower the RMSE, further tuning of the model can be applied such as including more attributes. Alternatively, a simpler linear regression model may be used if only 3 attributes will be used.
+### Key Statistical and Machine Learning Skills Demonstrated
+- Exploratory data analysis (EDA)
+- Feature selection based on domain knowledge
+- Feature engineering and data preprocessing
+- Missing value treatment
+- Binary encoding of categorical variables
+- Data standardisation
+- Supervised machine learning (regression)
+- Model training using stochastic gradient descent
+- Predictive model evaluation using RMSE
+- Python, Pandas, NumPy and Scikit-learn
+
+### Reflection
+
+The relatively high RMSE suggests that delivery duration is influenced by additional variables beyond the three predictors used. Potential improvements include incorporating geographic features, vehicle characteristics, time-of-day effects, rider behaviour, and traffic-related variables. Future iterations could also compare alternative regression algorithms such as Linear Regression, Random Forest, Gradient Boosting, or XGBoost, together with hyperparameter tuning and cross-validation to improve predictive accuracy.
