@@ -112,14 +112,41 @@ The model successfully generated delivery time predictions for unseen deliveries
 
 On average, the model's predicted delivery times differ from the actual delivery times by about 794 seconds (13.2 minutes). 
 
-| Statistic | Value |
-|---|---|
-| Mean travel time | **1,557 s (26.0 min)** |
-| Median travel time | **1,369 s (22.8 min)** |
-| Standard deviation | **987 s (16.5 min)** |
-| RMSE | **794 s (13.2 min)** |
-
-<img width="400px" class="img-fluid"  src="../img/sendy_time_dist.png"> 
+<table>
+  <tr>
+    <td valign="middle">
+      <table>
+        <thead>
+          <tr>
+            <th>Statistic</th>
+            <th>Value</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Mean travel time</td>
+            <td><strong>1,557 s (26.0 min)</strong></td>
+          </tr>
+          <tr>
+            <td>Median travel time</td>
+            <td><strong>1,369 s (22.8 min)</strong></td>
+          </tr>
+          <tr>
+            <td>Standard deviation</td>
+            <td><strong>987 s (16.5 min)</strong></td>
+          </tr>
+          <tr>
+            <td>RMSE</td>
+            <td><strong>794 s (13.2 min)</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </td>
+    <td valign="middle">
+      <img src="../img/sendy_time_dist.png" width="400px" />
+    </td>
+  </tr>
+</table>
 
 The typical delivery time in the dataset was 1,557 seconds (26 minutes), with the middle 50% of deliveries ranging from 882 seconds (14 minutes) to 2,040 seconds (34 minutes). With an RMSE of 794 s (13 minutes)this level of accuracy suggests the model could support high-level operational planning, such as estimating driver workload, like the estimated time needed for a delivery. However, the prediction error remains too large for precise customer-facing ETAs.
 
