@@ -110,7 +110,9 @@ The model successfully generated delivery time predictions for unseen deliveries
 
 ### Reflection
 
-On average, the model's predicted delivery times differ from the actual delivery times by about 13 minutes. The relatively high RMSE suggests that delivery duration is influenced by additional variables beyond the three predictors used. Potential improvements include incorporating geographic features, vehicle characteristics, time-of-day effects, rider behaviour, and traffic-related variables. Future iterations could also compare alternative regression algorithms such as Linear Regression, Random Forest, Gradient Boosting, or XGBoost, together with hyperparameter tuning and cross-validation to improve predictive accuracy.
+On average, the model's predicted delivery times differ from the actual delivery times by about 794 seconds (13.2 minutes). 
+
+<img width="400px" class="img-fluid"  src="../img/sendy_time_dist.png"> 
 
 <table>
   <thead>
@@ -138,6 +140,12 @@ On average, the model's predicted delivery times differ from the actual delivery
     </tr>
   </tbody>
 </table>
+
+
+The typical delivery time in the dataset was 1,557 seconds (26.0 minutes), with the middle 50% of deliveries ranging from 882 seconds (14.7 minutes) to 2,040 seconds (34.0 minutes). This means the model's average prediction error is relatively large compared with the normal variation in delivery times. While the model captures general patterns in delivery time, the error suggests that additional variables—such as traffic conditions, time of day and location-based factors—would be required to improve predictions for individual deliveries. A quick correlation test shows that the longitude coordinates of the start and end points influence travel time, implying that deliveries moving east or west across the city may take longer.
+
+The relatively high RMSE suggests that delivery duration is influenced by additional variables beyond the three predictors used. Future model iterations could also compare alternative regression algorithms such as Linear Regression, Random Forest, Gradient Boosting, or XGBoost, together with hyperparameter tuning and cross-validation to improve predictive accuracy.
+
 
 ### Key Statistical and Machine Learning Skills Demonstrated
 - Exploratory data analysis (EDA)
