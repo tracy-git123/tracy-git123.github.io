@@ -61,7 +61,7 @@ I chose three predictor variables based on their statistically significant impac
     </tr>
   </tbody>
 </table>
-<br></br>
+<br>
 
 Several preprocessing and feature engineering steps were performed:
 
@@ -111,7 +111,7 @@ The model successfully generated delivery time predictions for unseen deliveries
 ### Reflection
 
 On average, the model's predicted delivery times differ from the actual delivery times by about 794 seconds (13.2 minutes). 
-<br></br>
+<br>
 <table>
   <thead>
     <tr>
@@ -138,7 +138,14 @@ On average, the model's predicted delivery times differ from the actual delivery
     </tr>
   </tbody>
 </table>
-<br></br>
+<br>
+
+| Statistic          | Value                  |
+| ------------------ | ---------------------: |
+| Mean travel time   | **1,557 s (26.0 min)** |
+| Median travel time | **1,369 s (22.8 min)** |
+| Standard deviation | **987 s (16.5 min)**   |
+| RMSE               | **794 s (13.2 min)**   |
 
 <img width="400px" class="img-fluid"  src="../img/sendy_time_dist.png"> 
 
