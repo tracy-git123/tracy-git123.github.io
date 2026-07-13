@@ -39,11 +39,11 @@ An initial exploratory assessment was undertaken to identify variables most like
 
 I chose three predictor variables based on their statistically significant impact on the delivery time:
 
-| Feature           | Rationale                                                                            |
-| :---              |                                                                                 ---: |
-| **Distance (km)** | Longer travel distances generally increase delivery time.                            |
-| **Day of Week**   | Weekday and weekend traffic patterns differ significantly, influencing travel times. |
-| **Precipitation** | Rainfall contributes to congestion and slower travel speeds.                         |
+|| Feature           | Rationale                                                                            |
+|| ----              | ------                                                                               |
+|| **Distance (km)** | Longer travel distances generally increase delivery time.                            |
+|| **Day of Week**   | Weekday and weekend traffic patterns differ significantly, influencing travel times. |
+|| **Precipitation** | Rainfall contributes to congestion and slower travel speeds.                         |
 
 
 Several preprocessing and feature engineering steps were performed:
@@ -94,6 +94,12 @@ The model successfully generated delivery time predictions for unseen deliveries
 ### Reflection
 
 On average, the model's predicted delivery times differ from the actual delivery times by about 13 minutes. The relatively high RMSE suggests that delivery duration is influenced by additional variables beyond the three predictors used. Potential improvements include incorporating geographic features, vehicle characteristics, time-of-day effects, rider behaviour, and traffic-related variables. Future iterations could also compare alternative regression algorithms such as Linear Regression, Random Forest, Gradient Boosting, or XGBoost, together with hyperparameter tuning and cross-validation to improve predictive accuracy.
+
+Statistic	Value
+Mean travel time	1,557 s (26.0 min)
+Median travel time	1,369 s (22.8 min)
+Standard deviation	987 s (16.5 min)
+RMSE	794 s (13.2 min)
 
 ### Key Statistical and Machine Learning Skills Demonstrated
 - Exploratory data analysis (EDA)
