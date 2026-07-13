@@ -152,7 +152,7 @@ The typical delivery time in the dataset was 1,557 seconds (26 minutes), with th
 
 While the model captures general patterns in delivery time, the relatively high RMSE suggests that delivery duration is influenced by additional variables beyond the three predictors used, such as traffic conditions, time of day or location-based factors. A quick correlation test shows that the longitude coordinates of the start and end locations influence travel time, implying that deliveries moving east or west across the city may take longer.
 
-Future model iterations could also compare alternative regression algorithms such as Linear Regression, Random Forest, Gradient Boosting, or XGBoost, together with hyperparameter tuning and cross-validation to improve predictive accuracy.
+Another step would be to remove outliers from the training data such as the ±700 deliveries completed in under 60 seconds. Future model iterations could also compare alternative regression algorithms such as Linear Regression, Random Forest, Gradient Boosting, or XGBoost, together with hyperparameter tuning and cross-validation to improve predictive accuracy.
 
 
 ### Key Statistical and Machine Learning Skills Demonstrated
