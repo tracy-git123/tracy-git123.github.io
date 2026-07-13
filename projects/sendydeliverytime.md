@@ -112,8 +112,6 @@ The model successfully generated delivery time predictions for unseen deliveries
 
 On average, the model's predicted delivery times differ from the actual delivery times by about 794 seconds (13.2 minutes). 
 
-<img width="400px" class="img-fluid"  src="../img/sendy_time_dist.png"> 
-
 <table>
   <thead>
     <tr>
@@ -141,10 +139,13 @@ On average, the model's predicted delivery times differ from the actual delivery
   </tbody>
 </table>
 
+<img width="400px" class="img-fluid"  src="../img/sendy_time_dist.png"> 
 
-The typical delivery time in the dataset was 1,557 seconds (26.0 minutes), with the middle 50% of deliveries ranging from 882 seconds (14.7 minutes) to 2,040 seconds (34.0 minutes). This means the model's average prediction error is relatively large compared with the normal variation in delivery times. While the model captures general patterns in delivery time, the error suggests that additional variables—such as traffic conditions, time of day and location-based factors—would be required to improve predictions for individual deliveries. A quick correlation test shows that the longitude coordinates of the start and end points influence travel time, implying that deliveries moving east or west across the city may take longer.
+The typical delivery time in the dataset was 1,557 seconds (26 minutes), with the middle 50% of deliveries ranging from 882 seconds (14 minutes) to 2,040 seconds (34 minutes). With an RMSE of 794 s (13 minutes)this level of accuracy suggests the model could support high-level operational planning, such as estimating driver workload, like the estimated time needed for a delivery. However, the prediction error remains too large for precise customer-facing ETAs.
 
-The relatively high RMSE suggests that delivery duration is influenced by additional variables beyond the three predictors used. Future model iterations could also compare alternative regression algorithms such as Linear Regression, Random Forest, Gradient Boosting, or XGBoost, together with hyperparameter tuning and cross-validation to improve predictive accuracy.
+While the model captures general patterns in delivery time, the relatively high RMSE suggests that delivery duration is influenced by additional variables beyond the three predictors used, such as traffic conditions, time of day or location-based factors. A quick correlation test shows that the longitude coordinates of the start and end locations influence travel time, implying that deliveries moving east or west across the city may take longer.
+
+Future model iterations could also compare alternative regression algorithms such as Linear Regression, Random Forest, Gradient Boosting, or XGBoost, together with hyperparameter tuning and cross-validation to improve predictive accuracy.
 
 
 ### Key Statistical and Machine Learning Skills Demonstrated
