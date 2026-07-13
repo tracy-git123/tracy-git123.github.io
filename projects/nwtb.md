@@ -38,7 +38,7 @@ Some respondents reported spending **over three hours** on a one-way trip within
     <div>New route map</div> 
   </div>
 </div>
-<br><br>
+<br>
 
 Before New Ways to Bus (NWTB), bus users could reach CHEO using Route 45 and Route 55, as shown above. Together, these routes provided coverage across the central part of Ottawa. 
 
@@ -68,8 +68,7 @@ With Route 55 gone, residents travelling from the west now face a more complicat
     <div>New route map</div> 
   </div>
 </div>
-<br><br>
-<br><br>
+<br>
 
 Before New Ways to Bus (NWTB), bus users could reach the Queensway Carleton Hospital using Route 57 or Route 58. Since the redesign, riders can now access the hospital using Routes 57, 68, and 88. As shown in the map on the right, under NWTB: 
 - Route 57 has been extended further east to the Rideau Centre, improving access for riders coming from central and eastern parts of the city. 
@@ -81,7 +80,7 @@ Taken together, these changes suggest that overall access to the Queensway Carle
 
 Through this collaboration with CAWI, I learnt that a Caring City sees, values and supports both carers and those they care for, with spaces & systems designed for their needs. 
 
->>Transit plays a critical role in care work. Care rarely happens in one place. It requires moving between homes, workplaces, schools, hospitals, pharmacies, daycares and social service centers. When transit is slow, unreliable, or poorly connected, care becomes more challenging, time-consuming, and expensive.
+>> Transit plays a critical role in care work. Care rarely happens in one place. It requires moving between homes, workplaces, schools, hospitals, pharmacies, daycares and social service centers. When transit is slow, unreliable, or poorly connected, care becomes more challenging, time-consuming, and expensive.
 
 Many care workers rely on public transit to reach their jobs and the people who depend on them, such as nannies, nurses, early childhood educators, personal support workers and assisted living aides. When public transit fails to support care work, the ripple effect can be seen in health outcomes, workforce participation, and community wellbeing. Designing transit with care in mind is not a niche issue. It is fundamental to building a city that works for everyone.
 
