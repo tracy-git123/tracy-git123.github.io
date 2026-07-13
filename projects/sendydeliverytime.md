@@ -111,41 +111,13 @@ The model successfully generated delivery time predictions for unseen deliveries
 ### Reflection
 
 On average, the model's predicted delivery times differ from the actual delivery times by about 794 seconds (13.2 minutes). 
-<br>
-<table>
-  <thead>
-    <tr>
-      <th>Statistic</th>
-      <th>Value</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Mean travel time</td>
-      <td><strong>1,557 s (26.0 min)</strong></td>
-    </tr>
-    <tr>
-      <td>Median travel time</td>
-      <td><strong>1,369 s (22.8 min)</strong></td>
-    </tr>
-    <tr>
-      <td>Standard deviation</td>
-      <td><strong>987 s (16.5 min)</strong></td>
-    </tr>
-    <tr>
-      <td>RMSE</td>
-      <td><strong>794 s (13.2 min)</strong></td>
-    </tr>
-  </tbody>
-</table>
-<br>
 
-| Statistic          | Value                  |
-| ------------------ | ---------------------: |
-| Mean travel time   | **1,557 s (26.0 min)** |
+| Statistic | Value |
+|---|---|
+| Mean travel time | **1,557 s (26.0 min)** |
 | Median travel time | **1,369 s (22.8 min)** |
-| Standard deviation | **987 s (16.5 min)**   |
-| RMSE               | **794 s (13.2 min)**   |
+| Standard deviation | **987 s (16.5 min)** |
+| RMSE | **794 s (13.2 min)** |
 
 <img width="400px" class="img-fluid"  src="../img/sendy_time_dist.png"> 
 
