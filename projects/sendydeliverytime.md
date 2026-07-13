@@ -112,11 +112,32 @@ The model successfully generated delivery time predictions for unseen deliveries
 
 On average, the model's predicted delivery times differ from the actual delivery times by about 13 minutes. The relatively high RMSE suggests that delivery duration is influenced by additional variables beyond the three predictors used. Potential improvements include incorporating geographic features, vehicle characteristics, time-of-day effects, rider behaviour, and traffic-related variables. Future iterations could also compare alternative regression algorithms such as Linear Regression, Random Forest, Gradient Boosting, or XGBoost, together with hyperparameter tuning and cross-validation to improve predictive accuracy.
 
-Statistic	Value
-Mean travel time	1,557 s (26.0 min)
-Median travel time	1,369 s (22.8 min)
-Standard deviation	987 s (16.5 min)
-RMSE	794 s (13.2 min)
+<table>
+  <thead>
+    <tr>
+      <th>Statistic</th>
+      <th>Value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Mean travel time</td>
+      <td><strong>1,557 s (26.0 min)</strong></td>
+    </tr>
+    <tr>
+      <td>Median travel time</td>
+      <td><strong>1,369 s (22.8 min)</strong></td>
+    </tr>
+    <tr>
+      <td>Standard deviation</td>
+      <td><strong>987 s (16.5 min)</strong></td>
+    </tr>
+    <tr>
+      <td>RMSE</td>
+      <td><strong>794 s (13.2 min)</strong></td>
+    </tr>
+  </tbody>
+</table>
 
 ### Key Statistical and Machine Learning Skills Demonstrated
 - Exploratory data analysis (EDA)
