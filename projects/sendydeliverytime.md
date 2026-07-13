@@ -39,11 +39,28 @@ An initial exploratory assessment was undertaken to identify variables most like
 
 I chose three predictor variables based on their statistically significant impact on the delivery time:
 
-|| Feature           | Rationale                                                                            |
-|| ----              | ------                                                                               |
-|| **Distance (km)** | Longer travel distances generally increase delivery time.                            |
-|| **Day of Week**   | Weekday and weekend traffic patterns differ significantly, influencing travel times. |
-|| **Precipitation** | Rainfall contributes to congestion and slower travel speeds.                         |
+<table>
+  <thead>
+    <tr>
+      <th>Feature</th>
+      <th>Rationale</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Distance (km)</strong></td>
+      <td>Longer travel distances generally increase delivery time.</td>
+    </tr>
+    <tr>
+      <td><strong>Day of Week</strong></td>
+      <td>Weekday and weekend traffic patterns differ significantly, influencing travel times.</td>
+    </tr>
+    <tr>
+      <td><strong>Precipitation</strong></td>
+      <td>Rainfall contributes to congestion and slower travel speeds.</td>
+    </tr>
+  </tbody>
+</table>
 
 
 Several preprocessing and feature engineering steps were performed:
