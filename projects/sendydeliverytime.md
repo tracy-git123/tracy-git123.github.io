@@ -61,7 +61,7 @@ I chose three predictor variables based on their statistically significant impac
     </tr>
   </tbody>
 </table>
-
+<br></br>
 
 Several preprocessing and feature engineering steps were performed:
 
@@ -111,7 +111,7 @@ The model successfully generated delivery time predictions for unseen deliveries
 ### Reflection
 
 On average, the model's predicted delivery times differ from the actual delivery times by about 794 seconds (13.2 minutes). 
-
+<br></br>
 <table>
   <thead>
     <tr>
@@ -138,6 +138,7 @@ On average, the model's predicted delivery times differ from the actual delivery
     </tr>
   </tbody>
 </table>
+<br></br>
 
 <img width="400px" class="img-fluid"  src="../img/sendy_time_dist.png"> 
 
