@@ -23,8 +23,8 @@ Some respondents reported spending **over three hours** on a one-way trip within
 >“_I’m needing to take a full day off work just to get to one medical appointment._”
 
 ### 🏥 Hospital access 
-<br><br>
-**CHEO - Children’s Hospital of Eastern Ontario**
+<br>
+**CHEO - Children’s Hospital of Eastern Ontario**<br>
 🔁 Key changes: Route 55 has been eliminated. Route 45 retained and new Route 5 introduced
 
 <div style="display: flex; gap: 10px;">
@@ -54,8 +54,8 @@ With Route 55 gone, residents travelling from the west now face a more complicat
 
 
 **Queensway Carleton Hospital**
-<br><br>
-🔁 Key changes: Route 58 has been changed and no longer passes by the hospital. Route 57 extended further northeast. Route 68 and 88 enhance access for users in the east and west. 
+<br>
+🔁 Key changes: Route 58 has been changed and no longer passes by the hospital. Route 57 extended further northeast. New Route 68 and 88.
 
 <div style="display: flex; gap: 10px;">
   <div style="flex: 1; text-align: center;">
